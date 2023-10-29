@@ -14,14 +14,14 @@ export function StackPage() {
   }, []);
 
   return (
-    <DSContainer>
+    <DSContainer title="STACK">
       <Typography>
         <p>
           A stack is a Last In First Out or LIFO data structure. That means that
           the first data to come in is the last data to come out. You can
           imagine this as a stack of plates where one is placed on top of
           another and you can only remove the one at the top.
-        </p>{" "}
+        </p>
         <p> Stacks can be used for a number of problems.</p>
         <ul>
           <li>Depth First Search </li>
@@ -85,7 +85,7 @@ export function StackPage() {
       </Typography>
       <PageButtons
         forwardTitle="QUEUE"
-        forwardTo={href.ds.stack}
+        forwardTo={href.ds.queue}
         backTitle="HOME"
         backTo={href.ds.home}
       />
