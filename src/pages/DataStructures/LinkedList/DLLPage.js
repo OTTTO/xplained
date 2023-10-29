@@ -7,6 +7,7 @@ import { CodeBlock } from "components/CodeBlock";
 import { PageButtons } from "components/PageButtons";
 import { DLLDemo } from "./DLLDemo";
 import { DSDivider } from "components/DSDivider";
+import { href } from "misc/href";
 
 export function DLLPage() {
   useEffect(() => {
@@ -176,9 +177,9 @@ export function DLLPage() {
               <DSDivider />
               <PageButtons
                 backTitle="SINGLY LINKED LIST"
-                backTo="/projects/xplained/ds/sll"
+                backTo={href.ds.sll}
                 forwardTitle="BINARY SEARCH TREE"
-                forwardTo="/projects/xplained/ds/bst"
+                forwardTo={href.ds.bst}
               />
             </Typography>
           </Grid>

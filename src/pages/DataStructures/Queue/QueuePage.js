@@ -7,6 +7,7 @@ import { CodeBlock } from "components/CodeBlock";
 import { PageButtons } from "components/PageButtons";
 import { QueueDemo } from "./QueueDemo";
 import { DSDivider } from "components/DSDivider";
+import { href } from "misc/href";
 
 export function QueuePage() {
   useEffect(() => {
@@ -115,9 +116,9 @@ export function QueuePage() {
               <DSDivider />
               <PageButtons
                 backTitle="STACK"
-                backTo="/projects/xplained/ds/stack"
+                backTo={href.ds.stack}
                 forwardTitle="SINGLY LINKED LIST"
-                forwardTo="/projects/xplained/ds/sll"
+                forwardTo={href.ds.sll}
               />
             </Typography>
           </Grid>

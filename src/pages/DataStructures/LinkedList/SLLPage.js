@@ -7,6 +7,7 @@ import { CodeBlock } from "components/CodeBlock";
 import { PageButtons } from "components/PageButtons";
 import { SLLDemo } from "./SLLDemo";
 import { DSDivider } from "components/DSDivider";
+import { href } from "misc/href";
 
 export function SLLPage() {
   useEffect(() => {
@@ -149,9 +150,9 @@ export function SLLPage() {
               <DSDivider />
               <PageButtons
                 backTitle="QUEUE"
-                backTo="/projects/xplained/ds/queue"
+                backTo={href.ds.queue}
                 forwardTitle="DOUBLY LINKED LIST"
-                forwardTo="/projects/xplained/ds/dll"
+                forwardTo={href.ds.dll}
               />
             </Typography>
           </Grid>

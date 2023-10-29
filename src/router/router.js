@@ -5,17 +5,18 @@ import { QueuePage } from "pages/DataStructures/Queue/QueuePage";
 import { SLLPage } from "pages/DataStructures/LinkedList/SLLPage";
 import { DLLPage } from "pages/DataStructures/LinkedList/DLLPage";
 import { BSTPage } from "pages/DataStructures/BinarySearchTree/BSTPage";
+import { href } from "misc/href";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/ds/stack" element={<StackPage />} />
-        <Route path="/ds/queue" element={<QueuePage />} />
-        <Route path="/ds/sll" element={<SLLPage />} />
-        <Route path="/ds/dll" element={<DLLPage />} />
-        <Route path="/ds/bst" element={<BSTPage />} />
+        <Route path={href.ds.home} element={<Index />} />
+        <Route path={href.ds.stack} element={<StackPage />} />
+        <Route path={href.ds.queue} element={<QueuePage />} />
+        <Route path={href.ds.sll} element={<SLLPage />} />
+        <Route path={href.ds.dll} element={<DLLPage />} />
+        <Route path={href.ds.bst} element={<BSTPage />} />
       </Routes>
     </BrowserRouter>
   );

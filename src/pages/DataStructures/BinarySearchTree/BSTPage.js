@@ -7,11 +7,12 @@ import { CodeBlock } from "components/CodeBlock";
 import { PageButtons } from "components/PageButtons";
 import { BSTDemo } from "./BSTDemo";
 import { DSDivider } from "components/DSDivider";
+import { href } from "misc/href";
 
 export function BSTPage() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
+  // useEffect(() => {
+  //   document.getElementById("outerGrid").scrollIntoView();
+  // }, []);
 
   return (
     <Grid border="double thick black" id="outerGrid">
@@ -182,7 +183,7 @@ export function BSTPage() {
               <DSDivider />
               <PageButtons
                 backTitle="DOUBLY LINKED LIST"
-                backTo="/projects/xplained/ds/dll"
+                backTo={href.ds.dll}
               />
             </Typography>
           </Grid>

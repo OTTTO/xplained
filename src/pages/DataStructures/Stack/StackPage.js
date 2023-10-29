@@ -7,6 +7,7 @@ import { CodeBlock } from "components/CodeBlock";
 import { StackDemo } from "./StackDemo";
 import { PageButtons } from "components/PageButtons";
 import { DSDivider } from "components/DSDivider";
+import { href } from "misc/href";
 
 export function StackPage() {
   useEffect(() => {
@@ -116,7 +117,9 @@ export function StackPage() {
               <DSDivider />
               <PageButtons
                 forwardTitle="QUEUE"
-                forwardTo="/projects/xplained/ds/queue"
+                forwardTo={href.ds.stack}
+                backTitle="HOME"
+                backTo={href.ds.home}
               />
             </Typography>
           </Grid>
