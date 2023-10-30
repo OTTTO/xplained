@@ -7,6 +7,7 @@ import { BSTDemo } from "./BSTDemo";
 import { DSDivider } from "components/DSDivider";
 import { DSContainer } from "components/DSContainer";
 import { href } from "misc/href";
+import { DSTypography } from "components/DSTypography";
 
 export function BSTPage() {
   useEffect(() => {
@@ -15,7 +16,7 @@ export function BSTPage() {
 
   return (
     <DSContainer title="BINARY SEARCH TREE">
-      <Typography>
+      <DSTypography>
         <p>
           While sequential data structures are all lined up in sequence either
           front to back or top down, trees branch out with nodes in multiple
@@ -148,7 +149,7 @@ export function BSTPage() {
         />
         <DSDivider />
         <BSTDemo />
-      </Typography>
+      </DSTypography>
       <PageButtons backTitle="DOUBLY LINKED LIST" backTo={href.ds.dll} />
     </DSContainer>
   );

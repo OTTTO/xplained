@@ -1,12 +1,12 @@
-import { Typography } from "@mui/material";
 import { useEffect } from "react";
 import { codeSnippets } from "misc/codeSnippets";
 import { CodeBlock } from "components/CodeBlock";
 import { StackDemo } from "./StackDemo";
 import { PageButtons } from "components/PageButtons";
 import { DSDivider } from "components/DSDivider";
-import { href } from "misc/href";
+import { DSTypography } from "components/DSTypography";
 import { DSContainer } from "components/DSContainer";
+import { href } from "misc/href";
 
 export function StackPage() {
   useEffect(() => {
@@ -15,7 +15,7 @@ export function StackPage() {
 
   return (
     <DSContainer title="STACK">
-      <Typography>
+      <DSTypography>
         <p>
           A stack is a Last In First Out or LIFO data structure. That means that
           the first data to come in is the last data to come out. You can
@@ -82,7 +82,7 @@ export function StackPage() {
         />
         <DSDivider />
         <StackDemo />
-      </Typography>
+      </DSTypography>
       <PageButtons
         forwardTitle="QUEUE"
         forwardTo={href.ds.queue}

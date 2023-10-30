@@ -4,15 +4,15 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import OtherHousesIcon from "@mui/icons-material/OtherHouses";
 import { Link } from "react-router-dom";
 import { PageButtonText } from "./PageButtonText";
+import { href } from "misc/href";
 
 export function PageButtons({
-  backTitle = undefined,
-  backTo = undefined,
-  forwardTitle = undefined,
-  forwardTo = undefined,
-  hasHome = true,
+  backTitle,
+  backTo,
+  forwardTitle,
+  forwardTo,
+  isHome,
 }) {
-  const homeLink = "/";
   return (
     <Grid display="flex" justifyContent="space-between" alignItems="center">
       <Grid>
@@ -29,8 +29,8 @@ export function PageButtons({
         position="absolute"
         sx={{ transform: "translate(-50%, -5%)", left: "50%" }}
       >
-        {hasHome && (
-          <Link to={homeLink}>
+        {!isHome && (
+          <Link to={href.ds.home}>
             <IconButton>
               <OtherHousesIcon />
             </IconButton>

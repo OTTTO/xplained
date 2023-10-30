@@ -4,10 +4,10 @@ import { Footer } from "./Footer";
 
 export function DSContainer({ title, children }) {
   return (
-    <Grid border="double thick black" id="outerGrid">
+    <Grid id="outerGrid" border="1px solid black" backgroundColor="#f9f9f9">
       <Grid container direction="column" margin="0 auto">
         <Title title={title} />
-        <Grid width="90%" margin="0 auto" paddingBottom="1rem">
+        <Grid width="90%" maxWidth="800px" margin="0 auto">
           {children}
         </Grid>
         <Footer />

@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material";
 import { DSContainer } from "components/DSContainer";
+import { DSTypography } from "components/DSTypography";
 import { PageButtons } from "components/PageButtons";
 import { href } from "misc/href";
 import { useEffect } from "react";
@@ -11,13 +11,7 @@ export function Index() {
   }, []);
   return (
     <DSContainer title="DATA STRUCTURES">
-      <Typography
-        sx={{
-          backgroundColor: "white",
-          margin: "0rem auto 0",
-          padding: ".5rem 1rem",
-        }}
-      >
+      <DSTypography>
         <p>
           If you have ever written any code, you have most likely already worked
           with a number of data structures. Arrays and strings are probably the
@@ -73,12 +67,8 @@ export function Index() {
           <li>Breadth First Search</li>
           <li>Depth First Search</li>
         </ul>
-        <PageButtons
-          forwardTitle="STACK"
-          forwardTo={href.ds.stack}
-          hasHome={false}
-        />
-      </Typography>
+      </DSTypography>
+      <PageButtons forwardTitle="STACK" forwardTo={href.ds.stack} isHome />
     </DSContainer>
   );
 }

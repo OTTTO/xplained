@@ -1,12 +1,12 @@
-import { Typography } from "@mui/material";
 import { useEffect } from "react";
-import { codeSnippets } from "misc/codeSnippets";
 import { CodeBlock } from "components/CodeBlock";
 import { PageButtons } from "components/PageButtons";
-import { SLLDemo } from "./SLLDemo";
 import { DSDivider } from "components/DSDivider";
 import { DSContainer } from "components/DSContainer";
+import { DSTypography } from "components/DSTypography";
+import { codeSnippets } from "misc/codeSnippets";
 import { href } from "misc/href";
+import { SLLDemo } from "./SLLDemo";
 
 export function SLLPage() {
   useEffect(() => {
@@ -15,7 +15,7 @@ export function SLLPage() {
 
   return (
     <DSContainer title="SINGLY LINKED LIST">
-      <Typography>
+      <DSTypography>
         <p>
           A linked list is a sequential data structure. It behaves similarly to
           an array except that it has different algorithmic complexity meaning
@@ -122,7 +122,7 @@ export function SLLPage() {
         </p>
         <DSDivider />
         <SLLDemo />
-      </Typography>
+      </DSTypography>
       <PageButtons
         backTitle="QUEUE"
         backTo={href.ds.queue}

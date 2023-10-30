@@ -1,12 +1,12 @@
-import { Typography } from "@mui/material";
 import { useEffect } from "react";
 import { codeSnippets } from "misc/codeSnippets";
 import { CodeBlock } from "components/CodeBlock";
 import { PageButtons } from "components/PageButtons";
 import { QueueDemo } from "./QueueDemo";
 import { DSDivider } from "components/DSDivider";
-import { href } from "misc/href";
 import { DSContainer } from "components/DSContainer";
+import { DSTypography } from "components/DSTypography";
+import { href } from "misc/href";
 
 export function QueuePage() {
   useEffect(() => {
@@ -14,8 +14,8 @@ export function QueuePage() {
   }, []);
 
   return (
-    <DSContainer title="STACK">
-      <Typography>
+    <DSContainer title="QUEUE">
+      <DSTypography>
         <p>
           You are probably familiar with the term queue, as in the queue (or
           line) at the movie theater. The first person that goes into the queue,
@@ -93,7 +93,7 @@ export function QueuePage() {
         />
         <DSDivider />
         <QueueDemo />
-      </Typography>
+      </DSTypography>
       <PageButtons
         backTitle="STACK"
         backTo={href.ds.stack}
