@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { codeSnippets } from "misc/codeSnippets";
 import { CodeBlock } from "components/CodeBlock";
-import { StackDemo } from "./StackDemo";
+import { StackDemo } from "./Demo";
 import { PageButtons } from "components/PageButtons";
 import { DSDivider } from "components/DSDivider";
 import { DSTypography } from "components/DSTypography";

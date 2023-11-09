@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
-import { BSTNode } from "./BSTNode";
+import { BinaryTreeNode } from "./BinaryTreeNode";
 
-export function BSTChildren({
+export function BinaryTreeChildren({
   left = undefined,
   right = undefined,
   height,
@@ -31,14 +31,14 @@ export function BSTChildren({
       flexDirection="row"
       justifyContent={justify(left, right)}
     >
-      <BSTNode
+      <BinaryTreeNode
         data={left}
         node={leftNode}
         removeData={removeData}
         justAdded={justAdded}
         phaseNode={phaseNode}
       />
-      <BSTNode
+      <BinaryTreeNode
         data={right}
         node={rightNode}
         removeData={removeData}

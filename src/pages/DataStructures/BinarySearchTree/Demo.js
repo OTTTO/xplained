@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getRandomInt } from "utils/utils";
-import { BSTRow } from "./BSTRow";
+import { BinaryTreeRow } from "../../../components/BinaryTree/BinaryTreeRow";
 import numToWords from "num-to-words";
 import { OperationDescription } from "components/OperationDescription";
 import { OperationButton } from "components/OperationButton";
@@ -300,7 +300,7 @@ export function BSTDemo() {
           sx={{ backgroundColor: "black", opacity: 0.85 }}
         >
           {new Array(4).fill(true).map((_, height) => (
-            <BSTRow
+            <BinaryTreeRow
               nodes={keys}
               height={height}
               phaseNode={phaseNode}

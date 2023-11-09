@@ -6,5 +6,6 @@ export const href = {
     sll: "/ds/sll",
     dll: "/ds/dll",
     bst: "/ds/bst",
+    heap: "/ds/heap",
   },
 };

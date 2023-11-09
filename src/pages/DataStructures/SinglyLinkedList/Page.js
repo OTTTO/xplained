@@ -6,7 +6,7 @@ import { DSContainer } from "components/DSContainer";
 import { DSTypography } from "components/DSTypography";
 import { codeSnippets } from "misc/codeSnippets";
 import { href } from "misc/href";
-import { SLLDemo } from "./SLLDemo";
+import { SLLDemo } from "./Demo";
 
 export function SLLPage() {
   useEffect(() => {

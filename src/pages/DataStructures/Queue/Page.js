@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { codeSnippets } from "misc/codeSnippets";
 import { CodeBlock } from "components/CodeBlock";
 import { PageButtons } from "components/PageButtons";
-import { QueueDemo } from "./QueueDemo";
+import { QueueDemo } from "./Demo";
 import { DSDivider } from "components/DSDivider";
 import { DSContainer } from "components/DSContainer";
 import { DSTypography } from "components/DSTypography";

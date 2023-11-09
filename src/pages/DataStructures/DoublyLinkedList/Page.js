@@ -6,7 +6,7 @@ import { DSContainer } from "components/DSContainer";
 import { DSTypography } from "components/DSTypography";
 import { codeSnippets } from "misc/codeSnippets";
 import { href } from "misc/href";
-import { DLLDemo } from "./DLLDemo";
+import { DLLDemo } from "./Demo";
 
 export function DLLPage() {
   useEffect(() => {

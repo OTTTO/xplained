@@ -1,9 +1,8 @@
-import { Typography } from "@mui/material";
 import { useEffect } from "react";
 import { codeSnippets } from "misc/codeSnippets";
 import { CodeBlock } from "components/CodeBlock";
 import { PageButtons } from "components/PageButtons";
-import { BSTDemo } from "./BSTDemo";
+import { BSTDemo } from "./Demo";
 import { DSDivider } from "components/DSDivider";
 import { DSContainer } from "components/DSContainer";
 import { href } from "misc/href";
@@ -150,7 +149,12 @@ export function BSTPage() {
         <DSDivider />
         <BSTDemo />
       </DSTypography>
-      <PageButtons backTitle="DOUBLY LINKED LIST" backTo={href.ds.dll} />
+      <PageButtons
+        backTitle="DOUBLY LINKED LIST"
+        backTo={href.ds.dll}
+        forwardTitle="HEAP"
+        forwardTo={href.ds.heap}
+      />
     </DSContainer>
   );
 }

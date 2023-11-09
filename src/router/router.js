@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Index } from "pages/DataStructures/Index";
-import { StackPage } from "pages/DataStructures/Stack/StackPage";
-import { QueuePage } from "pages/DataStructures/Queue/QueuePage";
-import { SLLPage } from "pages/DataStructures/LinkedList/SLLPage";
-import { DLLPage } from "pages/DataStructures/LinkedList/DLLPage";
-import { BSTPage } from "pages/DataStructures/BinarySearchTree/BSTPage";
 import { href } from "misc/href";
+import { Index } from "pages/DataStructures/Index";
+import { StackPage } from "pages/DataStructures/Stack/Page";
+import { QueuePage } from "pages/DataStructures/Queue/Page";
+import { SLLPage } from "pages/DataStructures/SinglyLinkedList/Page";
+import { DLLPage } from "pages/DataStructures/DoublyLinkedList/Page";
+import { BSTPage } from "pages/DataStructures/BinarySearchTree/Page";
+import { HeapPage } from "pages/DataStructures/Heap/Page";
 
 function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ function AppRoutes() {
         <Route path={href.ds.sll} element={<SLLPage />} />
         <Route path={href.ds.dll} element={<DLLPage />} />
         <Route path={href.ds.bst} element={<BSTPage />} />
+        <Route path={href.ds.heap} element={<HeapPage />} />
       </Routes>
     </BrowserRouter>
   );

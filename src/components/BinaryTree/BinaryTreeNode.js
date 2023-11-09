@@ -1,6 +1,12 @@
 import { Grid, Typography } from "@mui/material";
 
-export function BSTNode({ data, node, justAdded, removeData, phaseNode }) {
+export function BinaryTreeNode({
+  data,
+  node,
+  justAdded,
+  removeData,
+  phaseNode,
+}) {
   let background = "white";
   if (data === justAdded && data === removeData)
     background = "linear-gradient(90deg, greenyellow, #ff4d00)";

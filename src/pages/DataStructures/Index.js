@@ -59,7 +59,9 @@ export function Index() {
           <li>
             <Link to={href.ds.bst}>Binary Search Tree (BST)</Link>
           </li>
-          <li>Heap</li>
+          <li>
+            <Link to={href.ds.heap}>Heap</Link>
+          </li>
           <li>AVL Tree (Self Balancing BST)</li>
         </ul>
         <h2 style={{ marginBottom: 0 }}>GRAPHS</h2>
