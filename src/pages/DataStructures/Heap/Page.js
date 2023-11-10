@@ -55,50 +55,30 @@ export function HeapPage() {
         </p>
         <DSDivider />
         <p></p>
-        <CodeBlock text={codeSnippets.heap.class} title="heap" width="20rem" />
+        <CodeBlock text={codeSnippets.heap.class} title="heap" />
         <DSDivider />
         <p></p>
-        <CodeBlock text={codeSnippets.heap.size} title="size" width="25rem" />
+        <CodeBlock text={codeSnippets.heap.size} title="size" />
         <DSDivider />
         <p></p>
-        <CodeBlock text={codeSnippets.heap.max} title="max" width="25rem" />
+        <CodeBlock text={codeSnippets.heap.max} title="max" />
         <DSDivider />
         <p></p>
-        <CodeBlock text={codeSnippets.heap.swap} title="swap" width="25rem" />
+        <CodeBlock text={codeSnippets.heap.swap} title="swap" />
         <DSDivider />
         <p></p>
-        <CodeBlock
-          text={codeSnippets.heap.siftUp}
-          title="siftup"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.heap.siftUp} title="sift up" />
         <DSDivider />
         <p></p>
-        <CodeBlock
-          text={codeSnippets.heap.insert}
-          title="insert"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.heap.insert} title="insert" />
         <p></p>
-        <CodeBlock
-          text={codeSnippets.heap.siftDown}
-          title="siftDown"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.heap.siftDown} title="sift down" />
         <DSDivider />
         <p></p>
-        <CodeBlock
-          text={codeSnippets.heap.extractMax}
-          title="extractMax"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.heap.extractMax} title="extract max" />
         <DSDivider />
         <p></p>
-        <CodeBlock
-          text={codeSnippets.heap.heapify}
-          title="heapify"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.heap.heapify} title="heapify" />
         <DSDivider />
         <HeapDemo />
       </DSTypography>

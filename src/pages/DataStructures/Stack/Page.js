@@ -37,7 +37,7 @@ export function StackPage() {
           <b>next</b> element in the stack - in other words the element beneath
           it.
         </p>
-        <CodeBlock text={codeSnippets.stack.node} title="node" width="20rem" />
+        <CodeBlock text={codeSnippets.stack.node} title="node" />
         <DSDivider />
         <p>
           The minimum implementation of Stack class itself contains only 1
@@ -55,20 +55,20 @@ export function StackPage() {
           newly added node to be the top and points it to the old top in order
           to extend the stack.
         </p>
-        <CodeBlock text={codeSnippets.stack.push} title="push" width="25rem" />
+        <CodeBlock text={codeSnippets.stack.push} title="push" />
         <DSDivider />
         <p>
           We remove nodes in a LIFO fashion by popping the top of the stack,
           which returns the top data and resets the top to be the next node down
           (even if that node is null or None).
         </p>
-        <CodeBlock text={codeSnippets.stack.pop} title="pop" width="25rem" />
+        <CodeBlock text={codeSnippets.stack.pop} title="pop" />
         <DSDivider />
         <p>
           If we just want to see what the top of the stack is or get the top
           data, we use peek instead of pop.
         </p>
-        <CodeBlock text={codeSnippets.stack.peek} title="peek" width="25rem" />
+        <CodeBlock text={codeSnippets.stack.peek} title="peek" />
         <DSDivider />
         <p>
           In many languages you don't need to implement a stack yourself or even

@@ -43,18 +43,14 @@ export function QueuePage() {
           list. We will see that we need this when dequing in order to set the
           new head.{" "}
         </p>
-        <CodeBlock text={codeSnippets.queue.node} title="node" width="20rem" />
+        <CodeBlock text={codeSnippets.queue.node} title="node" />
         <DSDivider />
         <p>
           The minimum Queue class contains just 2 properties - <b>tail</b> which
           is a reference to the rear of the queue and <b>head</b> which is a
           reference to the front.
         </p>
-        <CodeBlock
-          text={codeSnippets.queue.class}
-          title="queue"
-          width="20rem"
-        />
+        <CodeBlock text={codeSnippets.queue.class} title="queue" />
         <DSDivider />
         <p>
           To add a node to the back of the queue, we enqueue it by pointing the
@@ -63,11 +59,7 @@ export function QueuePage() {
           simpler if we have an empty queue - we just set both the tail and head
           as the new node.
         </p>
-        <CodeBlock
-          text={codeSnippets.queue.enqueue}
-          title="enqueue"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.queue.enqueue} title="enqueue" />
         <DSDivider />
         <p>
           When we return and remove, or deque, a node from the queue we simply
@@ -75,11 +67,7 @@ export function QueuePage() {
           differs if we are removing the last node in the queue, in which case
           we essentially reset the queue.
         </p>
-        <CodeBlock
-          text={codeSnippets.queue.deque}
-          title="deque"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.queue.deque} title="deque" />
         <DSDivider />
         <p>
           Just like stacks, in both JavaScript and Python, a list can serve as a

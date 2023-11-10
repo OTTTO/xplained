@@ -76,11 +76,7 @@ export function BSTPage() {
           We don't need to store the root of the BST because we know that the
           first node will always be the root and then we climb down from there.
         </p>
-        <CodeBlock
-          text={codeSnippets.bst.class}
-          title="binary search tree"
-          width="20rem"
-        />
+        <CodeBlock text={codeSnippets.bst.class} title="binary search tree" />
         <DSDivider />
         <p>
           Insertion into a BST is simple. If there is no root we simply set the
@@ -89,11 +85,7 @@ export function BSTPage() {
           current node. Once we hit the bottom of the tree that is when we do
           the actual insertion.
         </p>
-        <CodeBlock
-          text={codeSnippets.bst.insert}
-          title="insert"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.bst.insert} title="insert" />
         <DSDivider />
         <p>
           Checking if an element exists is how we search for elements in a BST.
@@ -102,18 +94,14 @@ export function BSTPage() {
           bottom of the tree we return false knowing that the key is not
           present.
         </p>
-        <CodeBlock
-          text={codeSnippets.bst.exists}
-          title="exists"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.bst.exists} title="exists" />
         <DSDivider />
         <p>
           Getting an element is done exactly the same as checking if it exists
           but instead of returning a boolean we return the data of that node or
           a null value if we don't find it.
         </p>
-        <CodeBlock text={codeSnippets.bst.get} title="get" width="25rem" />
+        <CodeBlock text={codeSnippets.bst.get} title="get" />
         <DSDivider />
         <p>
           Find the minimum child of any given node. This is used to find the
@@ -121,18 +109,14 @@ export function BSTPage() {
           The successor is always the min of the right child and it will take
           the place of the deleted node.
         </p>
-        <CodeBlock text={codeSnippets.bst.min} title="min" width="25rem" />
+        <CodeBlock text={codeSnippets.bst.min} title="min" />
         <DSDivider />
         <p>
           Some simple logic is needed to replace the root node when it only has
           one child. We have extracted this as a helper method because to clean
           up the delete method.
         </p>
-        <CodeBlock
-          text={codeSnippets.bst.replaceRoot}
-          title="replace root"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.bst.replaceRoot} title="replace root" />
         <DSDivider />
         <p>
           Deleting a node also involves recursing the tree until the key is
@@ -141,11 +125,7 @@ export function BSTPage() {
           with only one child, or deleting a node with both a left and right
           child.
         </p>
-        <CodeBlock
-          text={codeSnippets.bst.delete}
-          title="delete"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.bst.delete} title="delete" />
         <DSDivider />
         <BSTDemo />
       </DSTypography>

@@ -25,9 +25,8 @@ export function HeapDemo() {
     }
   };
 
-  console.log(addedNode);
-
   const heapCopy = [...heap];
+  console.log(heapCopy);
 
   const size = () => heapCopy.length;
   const max = () => heapCopy[0];
@@ -89,13 +88,16 @@ export function HeapDemo() {
   };
 
   const extractMax = () => {
+    setButtonsDisabled(true);
     const nodeSteps = [];
     const heapArr = [];
 
     if (heapCopy.length === 0) throw new Error("Empty Heap");
     const max_ = max();
-    if (size() === 1) heapCopy.pop();
-    else {
+    if (size() === 1) {
+      heapCopy.pop();
+      setHeap([]);
+    } else {
       heapCopy[0] = heapCopy.pop();
       nodeSteps.push(heapCopy[0]);
       heapArr.push([...heapCopy]);

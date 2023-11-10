@@ -61,11 +61,7 @@ export function SLLPage() {
           <b>head</b>, which are the two ends of the linked list{" "}
           <b>{"[tail]->[node]->[head]"}</b>
         </p>
-        <CodeBlock
-          text={codeSnippets.sll.class}
-          title="linked list"
-          width="20rem"
-        />
+        <CodeBlock text={codeSnippets.sll.class} title="linked list" />
         <DSDivider />
         <p>
           For a singly linked list, when we add a new node we append it to the
@@ -73,11 +69,7 @@ export function SLLPage() {
           the new node. Otherwise, we step all the way through the List and tack
           the node on to the end.
         </p>
-        <CodeBlock
-          text={codeSnippets.sll.append}
-          title="append"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.sll.append} title="append" />
         <DSDivider />
         <p>
           When we want to remove a node from the linked list, firt we make sure
@@ -86,11 +78,7 @@ export function SLLPage() {
           take that node and point it to the node after the node we want to
           remove, effectively dropping it from the linked list.
         </p>
-        <CodeBlock
-          text={codeSnippets.sll.remove}
-          title="remove"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.sll.remove} title="remove" />
         <DSDivider />
         <p>
           Getting a node from a linked list is simple, we do the same checks
@@ -100,7 +88,7 @@ export function SLLPage() {
           Otherwise we just iterate up until the given index and return the
           node's data.
         </p>
-        <CodeBlock text={codeSnippets.sll.get} title="get" width="25rem" />
+        <CodeBlock text={codeSnippets.sll.get} title="get" />
         <DSDivider />
         <p>
           Here we are simply returning the size of the list. This length method
@@ -108,11 +96,7 @@ export function SLLPage() {
           linked list would have an iterator on it that we can just call next on
           until it is exhausted.
         </p>
-        <CodeBlock
-          text={codeSnippets.sll.length}
-          title="length"
-          width="25rem"
-        />
+        <CodeBlock text={codeSnippets.sll.length} title="length" />
         <DSDivider />
         <p>
           Unlike stacks and queues, we cannot use JS and Python Lists to mock
