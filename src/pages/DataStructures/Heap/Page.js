@@ -55,39 +55,47 @@ export function HeapPage() {
         </p>
         <DSDivider />
         <p></p>
-        <CodeBlock text={codeSnippets.bst.class} title="heap" width="20rem" />
+        <CodeBlock text={codeSnippets.heap.class} title="heap" width="20rem" />
         <DSDivider />
         <p></p>
-        <CodeBlock text={codeSnippets.bst.insert} title="size" width="25rem" />
+        <CodeBlock text={codeSnippets.heap.size} title="size" width="25rem" />
         <DSDivider />
         <p></p>
-        <CodeBlock text={codeSnippets.bst.exists} title="max" width="25rem" />
+        <CodeBlock text={codeSnippets.heap.max} title="max" width="25rem" />
         <DSDivider />
         <p></p>
-        <CodeBlock text={codeSnippets.bst.get} title="swap" width="25rem" />
-        <DSDivider />
-        <p></p>
-        <CodeBlock text={codeSnippets.bst.min} title="siftup" width="25rem" />
+        <CodeBlock text={codeSnippets.heap.swap} title="swap" width="25rem" />
         <DSDivider />
         <p></p>
         <CodeBlock
-          text={codeSnippets.bst.replaceRoot}
+          text={codeSnippets.heap.siftUp}
+          title="siftup"
+          width="25rem"
+        />
+        <DSDivider />
+        <p></p>
+        <CodeBlock
+          text={codeSnippets.heap.insert}
           title="insert"
           width="25rem"
         />
         <p></p>
-        <CodeBlock text={codeSnippets.bst.get} title="siftDown" width="25rem" />
+        <CodeBlock
+          text={codeSnippets.heap.siftDown}
+          title="siftDown"
+          width="25rem"
+        />
         <DSDivider />
         <p></p>
         <CodeBlock
-          text={codeSnippets.bst.get}
+          text={codeSnippets.heap.extractMax}
           title="extractMax"
           width="25rem"
         />
         <DSDivider />
         <p></p>
         <CodeBlock
-          text={codeSnippets.bst.delete}
+          text={codeSnippets.heap.heapify}
           title="heapify"
           width="25rem"
         />

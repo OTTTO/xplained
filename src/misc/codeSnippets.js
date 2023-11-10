@@ -893,4 +893,188 @@ delete(key, isRoot = true) {
 }`,
     },
   },
+  heap: {
+    class: {
+      python: `class Heap:
+  def __init__(self):
+      self.heap = []`,
+      javascript: `class Heap {
+  constructor() {
+    this.heap = []
+  } 
+}`,
+    },
+    size: {
+      python: `# return size of heap
+def size(self):
+    return len(self.heap)`,
+      javascript: `// return size of heap
+size() {
+  return this.heap.length
+}`,
+    },
+    max: {
+      python: `# return maximum element in heap
+def max(self):
+    return self.heap[0]`,
+      javascript: `// return maximum element in heap
+max() {
+  return this.heap[0]
+}`,
+    },
+    swap: {
+      python: `# swap two elements in the heap
+def swap(self, u, v):
+    self.heap[u], self.heap[v] = self.heap[v], self.heap[u]`,
+      javascript: ` // swap two elements in the heap
+swap(u, v) {
+  const temp = this.heap[u]
+  this.heap[u] = this.heap[v]
+  this.heap[v] = temp
+}`,
+    },
+    siftUp: {
+      python: `# sift up an element until its in its rightful place
+def siftUp(self, curr, parent):
+    # while the current element is greater than its parent
+    while parent != -1 and self.heap[curr] > self.heap[parent]:
+        # swap those two elements
+        self.swap(curr, parent)
+        # make curr point to itself again
+        curr = parent
+        # climb up heap to next parent
+        parent = math.ceil(parent / 2) - 1`,
+      javascript: `  // sift up an element until its in its rightful place
+siftUp(curr, parent) {
+  // while the current element is greater than its parent
+  while (this.heap[curr] > this.heap[parent]) {
+    // swap those two elements
+    this.swap(curr, parent)
+    // make curr point to itself again
+    curr = parent
+    // climb up heap to next parent
+    parent = Math.ceil(parent / 2) - 1
+  }
+}`,
+    },
+    insert: {
+      python: `# insert an element into the heap
+def insert(self, el):
+    # add element to end of heap
+    self.heap.append(el)
+    # find newly added element
+    curr = self.size() - 1
+    # find parent of newly added element
+    parent = math.ceil(curr / 2) - 1
+    # sift up element through the heap to its rightful place
+    self.siftUp(curr, parent)`,
+      javascript: `  // insert an element into the heap
+insert(el) {
+  // add element to end of heap
+  this.heap.push(el)
+  // find newly added element
+  let curr = this.size() - 1
+  // find parent of newly added element
+  let parent = Math.ceil(curr / 2) - 1
+  // sift up element through the heap to its rightful place
+  this.siftUp(curr, parent)
+}`,
+    },
+    siftDown: {
+      python: `# sift down element until its in its rightful place
+def siftDown(self, parent):
+    leftChild = 2 * parent + 1        
+    rightChild = 2 * parent + 2
+
+    badLeft = leftChild > self.size() - 1
+    badRight = rightChild > self.size() - 1
+
+    biggerChild = None
+    # check for index out of bounds exception
+    if (badLeft and badRight):
+        return 
+    elif (badRight):
+        biggerChild = leftChild
+    else:
+      if (self.heap[leftChild] > self.heap[rightChild]):
+        biggerChild = leftChild
+      else:
+        biggerChild = rightChild      
+    
+    # we need to swap with the bigger element to stay ordered
+    # if the parent is larger than the child, the parent is already 
+    # in its rightful place and we stop the recursion
+    if self.heap[parent] < self.heap[biggerChild]:
+        self.swap(parent, biggerChild)
+        # recurse down heap
+        self.siftDown(biggerChild)`,
+      javascript: `// sift down element until its in its rightful place
+siftDown(parent) {  	
+  const leftChild = 2 * parent + 1
+  const rightChild = 2 * parent + 2
+  const biggerChild = this.heap[leftChild] > this.heap[rightChild] ? leftChild : rightChild
+
+  // we need to swap with the bigger element to stay ordered
+  // if the parent is larger than the child, the parent is already 
+  // in its rightful place and we stop the recursion
+  if (this.heap[parent] < this.heap[biggerChild]) {
+    this.swap(parent, biggerChild)
+    // recurse down heap
+    this.siftDown(biggerChild)
+  } 
+}`,
+    },
+    extractMax: {
+      python: `# return and remove maximum element in the heap
+def extractMax(self):
+    if len(self.heap) == 0:
+        raise Exception('Empty Heap')
+    # max element is always found at the front of the array (heap)
+    max_ = self.heap[0]
+    # if this is the last element, simply remove it
+    if self.size() == 1:
+        self.heap.pop()
+    else:
+        last = self.size() - 1
+        # replace front with last element
+        self.heap[0] = self.heap.pop()
+        # sift down element (which is now at index 0) to its rightful place
+        self.siftDown(0) 
+    return max_`,
+      javascript: `  // return and remove maximum element in the heap
+extractMax() {
+  if (this.heap.length === 0)
+    throw new Error('Empty Heap')
+  // max element is always found at the front of the array (heap)
+  const max = this.heap[0]
+  // if this is the last element, simply remove it
+  if (this.size() === 1)
+    this.heap.pop()
+  else {
+    const last = this.size() - 1
+    // replace front with last element
+    this.heap[0] = this.heap.pop()
+    // sift down element (which is now at index 0) to its rightful place
+    this.siftDown(0)     
+  }
+  return max
+}`,
+    },
+    heapify: {
+      python: `# transform an array into a heap
+@staticmethod
+def heapify(arr):
+    heap = Heap()
+    for el in arr:
+        heap.insert(el)
+    return heap`,
+      javascript: `  // transform an array into a heap
+static heapify(arr) {
+  const heap = new Heap()
+  for (let el of arr)
+    heap.insert(el)
+  return heap
+}`,
+    },
+  },
 };
