@@ -5,7 +5,7 @@ import { BinaryTreeNode } from "./BinaryTreeNode";
 export function BinaryTreeRow({
   nodes,
   height,
-  removeData,
+  removeData = undefined,
   justAdded,
   phaseNode,
 }) {

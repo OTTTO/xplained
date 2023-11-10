@@ -1030,12 +1030,11 @@ def extractMax(self):
     if len(self.heap) == 0:
         raise Exception('Empty Heap')
     # max element is always found at the front of the array (heap)
-    max_ = self.heap[0]
+    max_ = self.max()
     # if this is the last element, simply remove it
     if self.size() == 1:
         self.heap.pop()
     else:
-        last = self.size() - 1
         # replace front with last element
         self.heap[0] = self.heap.pop()
         # sift down element (which is now at index 0) to its rightful place
@@ -1046,12 +1045,11 @@ extractMax() {
   if (this.heap.length === 0)
     throw new Error('Empty Heap')
   // max element is always found at the front of the array (heap)
-  const max = this.heap[0]
+  const max = this.max()
   // if this is the last element, simply remove it
   if (this.size() === 1)
     this.heap.pop()
   else {
-    const last = this.size() - 1
     // replace front with last element
     this.heap[0] = this.heap.pop()
     // sift down element (which is now at index 0) to its rightful place

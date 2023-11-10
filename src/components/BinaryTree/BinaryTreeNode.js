@@ -4,7 +4,7 @@ export function BinaryTreeNode({
   data,
   node,
   justAdded,
-  removeData,
+  removeData = undefined,
   phaseNode,
 }) {
   let background = "white";

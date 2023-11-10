@@ -312,19 +312,19 @@ export function BSTDemo() {
         <OperationButton
           onClick={insert}
           disabled={isFull || buttonsDisabled}
-          text={`INSERT(${nextNode?.key})`}
+          text={`insert(${nextNode?.key})`}
           textDecoration={isFull ? "line-through" : ""}
         />
         <OperationButton
           onClick={deleteNode}
           disabled={isEmpty(bst) || buttonsDisabled}
-          text={`DELETE(${bst[nextRemove]?.key || ""})`}
+          text={`delete(${bst[nextRemove]?.key || ""})`}
           textDecoration={isEmpty(bst) ? "line-through" : ""}
         />
         <OperationButton
           onClick={getNode}
           disabled={isEmpty(bst) || buttonsDisabled}
-          text={`GET(${bst[nextGet]?.key || ""})`}
+          text={`get(${bst[nextGet]?.key || ""})`}
           textDecoration={isEmpty(bst) ? "line-through" : ""}
         />
         {viewGet && (
