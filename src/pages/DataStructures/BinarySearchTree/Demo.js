@@ -25,9 +25,9 @@ export function BSTDemo() {
   const [nextGet, setNextGet] = useState(0);
   const [nodeReturned, setNodeReturned] = useState(bst[0]);
   const [viewGet, setViewGet] = useState(false);
-  const [justAdded, setJustAdded] = useState(0);
-  const [isFull, setFull] = useState(false);
+  const [addedNode, setAddedNode] = useState(0);
   const [phaseNode, setPhaseNode] = useState(undefined);
+  const [isFull, setFull] = useState(false);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const timeout = 400;
 
@@ -47,7 +47,7 @@ export function BSTDemo() {
       .filter((idx) => !!idx || idx === 0);
     const removeRandom = Math.floor(Math.random() * filled.length);
     const getRandom = Math.floor(Math.random() * filled.length);
-    setNextRemove(filled[removeRandom]);
+    setNextRemove(removeRandom);
     setNextGet(filled[getRandom]);
   };
 
@@ -126,7 +126,8 @@ export function BSTDemo() {
         if (nextNode.key < tree[i].key) {
           if (!isNode(tree[leftChild])) {
             tree[leftChild] = nextNode;
-            setJustAdded(nextNode.key);
+            setAddedNode(leftChild);
+            console.log("next", nextNode);
             nodeSteps.push(leftChild);
             break;
           } else {
@@ -135,7 +136,7 @@ export function BSTDemo() {
         } else if (nextNode.key > tree[i].key) {
           if (!isNode(tree[rightChild])) {
             tree[rightChild] = nextNode;
-            setJustAdded(nextNode.key);
+            setAddedNode(rightChild);
             nodeSteps.push(rightChild);
             break;
           } else {
@@ -304,8 +305,8 @@ export function BSTDemo() {
               nodes={keys}
               height={height}
               phaseNode={phaseNode}
-              removeData={bst[nextRemove]?.key}
-              justAdded={justAdded}
+              removeNode={nextRemove}
+              addedNode={addedNode}
             />
           ))}
         </Grid>

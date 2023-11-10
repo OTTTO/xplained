@@ -6,8 +6,8 @@ export function BinaryTreeChildren({
   right = undefined,
   height,
   group,
-  removeData,
-  justAdded,
+  removeNode,
+  addedNode,
   phaseNode,
 }) {
   const justify = (left, right) => {
@@ -34,15 +34,15 @@ export function BinaryTreeChildren({
       <BinaryTreeNode
         data={left}
         node={leftNode}
-        removeData={removeData}
-        justAdded={justAdded}
+        removeNode={removeNode}
+        addedNode={addedNode}
         phaseNode={phaseNode}
       />
       <BinaryTreeNode
         data={right}
         node={rightNode}
-        removeData={removeData}
-        justAdded={justAdded}
+        removeNode={removeNode}
+        addedNode={addedNode}
         phaseNode={phaseNode}
       />
     </Grid>

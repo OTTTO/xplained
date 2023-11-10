@@ -3,15 +3,18 @@ import { Grid, Typography } from "@mui/material";
 export function BinaryTreeNode({
   data,
   node,
-  justAdded,
-  removeData = undefined,
+  addedNode,
+  removeNode = undefined,
   phaseNode,
 }) {
+  console.log("node", node);
+  // console.log("rm", removeNode);
+  console.log("addedNode", addedNode);
   let background = "white";
-  if (data === justAdded && data === removeData)
+  if (node === addedNode && node === removeNode)
     background = "linear-gradient(90deg, greenyellow, #ff4d00)";
-  else if (data === justAdded) background = "greenyellow";
-  else if (data === removeData) background = "#ff4d00";
+  else if (node === addedNode) background = "greenyellow";
+  else if (node === removeNode) background = "#ff4d00";
 
   let border = "none";
   if (data || data === 0) border = "1px solid red";

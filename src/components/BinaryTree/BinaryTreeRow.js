@@ -5,8 +5,8 @@ import { BinaryTreeNode } from "./BinaryTreeNode";
 export function BinaryTreeRow({
   nodes,
   height,
-  removeData = undefined,
-  justAdded,
+  removeNode = undefined,
+  addedNode,
   phaseNode,
 }) {
   const getRow = () => {
@@ -42,8 +42,8 @@ export function BinaryTreeRow({
           <BinaryTreeNode
             data={nodes[0]}
             node={0}
-            removeData={removeData}
-            justAdded={justAdded}
+            removeNode={removeNode}
+            addedNode={addedNode}
             phaseNode={phaseNode}
           />
         ) : (
@@ -53,8 +53,8 @@ export function BinaryTreeRow({
               right={el.right}
               height={height}
               group={i}
-              removeData={removeData}
-              justAdded={justAdded}
+              removeNode={removeNode}
+              addedNode={addedNode}
               phaseNode={phaseNode}
             />
           ))

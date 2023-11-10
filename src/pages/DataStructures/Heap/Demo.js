@@ -10,7 +10,7 @@ export function HeapDemo() {
   const getNextNode = () => getRandomInt(100);
   const [nextNode, setNextNode] = useState(getNextNode());
   const [phaseNode, setPhaseNode] = useState([]);
-  const [justAdded, setJustAdded] = useState(0);
+  const [addedNode, setAddedNode] = useState(0);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const isFull = heap.length === 15;
   const isEmpty = heap.length === 0;
@@ -24,6 +24,8 @@ export function HeapDemo() {
       }, timeout * i);
     }
   };
+
+  console.log(addedNode);
 
   const heapCopy = [...heap];
 
@@ -58,7 +60,7 @@ export function HeapDemo() {
 
     curr = siftUp(curr, parent, nodeSteps, heapArr);
 
-    setJustAdded(heapCopy[curr]);
+    setAddedNode(curr);
 
     const lastNode = nodeSteps.length - 1;
     const timeoutMul = lastNode;
@@ -143,7 +145,7 @@ export function HeapDemo() {
             nodes={heap}
             height={height}
             phaseNode={phaseNode}
-            justAdded={justAdded}
+            addedNode={addedNode}
           />
         ))}
       </Grid>
