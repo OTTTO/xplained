@@ -54,30 +54,46 @@ export function HeapPage() {
           </ul>
         </p>
         <DSDivider />
-        <p></p>
+        <p>
+          The heap class only contains one property, heap, which is the array
+          where the heap's elements are stored.
+        </p>
         <CodeBlock text={codeSnippets.heap.class} title="heap" />
-        <DSDivider />
-        <p></p>
         <CodeBlock text={codeSnippets.heap.size} title="size" />
-        <DSDivider />
-        <p></p>
         <CodeBlock text={codeSnippets.heap.max} title="max" />
-        <DSDivider />
-        <p></p>
         <CodeBlock text={codeSnippets.heap.swap} title="swap" />
         <DSDivider />
-        <p></p>
+        <p>
+          Helper function that sifts an element up to its rightful place. This
+          is used whenever we insert an element since during insertion the
+          element is initially placed at the end of the heap.
+        </p>
         <CodeBlock text={codeSnippets.heap.siftUp} title="sift up" />
         <DSDivider />
-        <p></p>
+        <p>
+          Inserting elements is how we add them to the heap. We simply append
+          the element to the end of the heap and then sift it up until all the
+          heap properties are satisfied again.
+        </p>
         <CodeBlock text={codeSnippets.heap.insert} title="insert" />
-        <p></p>
+        <DSDivider />
+        <p>
+          Helper function that sifts an element down to it's rightful place. We
+          recursively find the bigger child belonging to the current node
+          (parent) and swap those two elements until the heap properties are
+          satisfied. This is used when we are extracting the max element from
+          the heap.
+        </p>
         <CodeBlock text={codeSnippets.heap.siftDown} title="sift down" />
         <DSDivider />
-        <p></p>
+        <p>
+          Extract (remove and return) the max element from the heap. We save the
+          max element and then replace it with the last element which we then
+          recursively sift down to its rightful place. This would be the method
+          the client calls to get the next element in a priority queue
+        </p>
         <CodeBlock text={codeSnippets.heap.extractMax} title="extract max" />
         <DSDivider />
-        <p></p>
         <CodeBlock text={codeSnippets.heap.heapify} title="heapify" />
         <DSDivider />
         <HeapDemo />

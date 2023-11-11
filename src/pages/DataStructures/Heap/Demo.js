@@ -26,7 +26,6 @@ export function HeapDemo() {
   };
 
   const heapCopy = [...heap];
-  console.log(heapCopy);
 
   const size = () => heapCopy.length;
   const max = () => heapCopy[0];
@@ -50,6 +49,7 @@ export function HeapDemo() {
 
   const insert = () => {
     setButtonsDisabled(true);
+    setAddedNode(undefined);
     let curr = size();
     let parent = Math.ceil(curr / 2) - 1;
 
@@ -59,8 +59,6 @@ export function HeapDemo() {
 
     curr = siftUp(curr, parent, nodeSteps, heapArr);
 
-    setAddedNode(curr);
-
     const lastNode = nodeSteps.length - 1;
     const timeoutMul = lastNode;
 
@@ -68,6 +66,7 @@ export function HeapDemo() {
     setNextNode(getNextNode());
 
     setTimeout(() => {
+      setAddedNode(curr);
       setPhaseNode(undefined);
       setButtonsDisabled(false);
     }, timeout * (timeoutMul + 1));
