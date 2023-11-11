@@ -10,12 +10,11 @@ export function HeapDemo() {
   const getNextNode = () => getRandomInt(100);
   const [nextNode, setNextNode] = useState(getNextNode());
   const [phaseNode, setPhaseNode] = useState([]);
-  const [addedNode, setAddedNode] = useState(0);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const isFull = heap.length === 15;
   const isEmpty = heap.length === 0;
 
-  const timeout = 400;
+  const timeout = 700;
   const setPhaseNodes = (nodeSteps, heapArr) => {
     for (let i = 0; i < nodeSteps.length; i++) {
       setTimeout(() => {
@@ -49,7 +48,6 @@ export function HeapDemo() {
 
   const insert = () => {
     setButtonsDisabled(true);
-    setAddedNode(undefined);
     let curr = size();
     let parent = Math.ceil(curr / 2) - 1;
 
@@ -66,7 +64,6 @@ export function HeapDemo() {
     setNextNode(getNextNode());
 
     setTimeout(() => {
-      setAddedNode(curr);
       setPhaseNode(undefined);
       setButtonsDisabled(false);
     }, timeout * (timeoutMul + 1));
@@ -97,8 +94,10 @@ export function HeapDemo() {
       heapCopy.pop();
       setHeap([]);
     } else {
+      nodeSteps.push(heapCopy.length - 1);
+      heapArr.push([...heapCopy]);
       heapCopy[0] = heapCopy.pop();
-      nodeSteps.push(heapCopy[0]);
+      nodeSteps.push(0);
       heapArr.push([...heapCopy]);
       siftDown(0, nodeSteps, heapArr);
     }
@@ -142,12 +141,7 @@ export function HeapDemo() {
         sx={{ backgroundColor: "black", opacity: 0.85 }}
       >
         {new Array(4).fill(true).map((_, height) => (
-          <BinaryTreeRow
-            nodes={heap}
-            height={height}
-            phaseNode={phaseNode}
-            addedNode={addedNode}
-          />
+          <BinaryTreeRow nodes={heap} height={height} phaseNode={phaseNode} />
         ))}
       </Grid>
       <OperationButton

@@ -25,7 +25,6 @@ export function BSTDemo() {
   const [nextGet, setNextGet] = useState(0);
   const [nodeReturned, setNodeReturned] = useState(bst[0]);
   const [viewGet, setViewGet] = useState(false);
-  const [addedNode, setAddedNode] = useState(0);
   const [phaseNode, setPhaseNode] = useState(undefined);
   const [isFull, setFull] = useState(false);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
@@ -47,7 +46,7 @@ export function BSTDemo() {
       .filter((idx) => !!idx || idx === 0);
     const removeRandom = Math.floor(Math.random() * filled.length);
     const getRandom = Math.floor(Math.random() * filled.length);
-    setNextRemove(removeRandom);
+    setNextRemove(filled[removeRandom]);
     setNextGet(filled[getRandom]);
   };
 
@@ -126,8 +125,6 @@ export function BSTDemo() {
         if (nextNode.key < tree[i].key) {
           if (!isNode(tree[leftChild])) {
             tree[leftChild] = nextNode;
-            setAddedNode(leftChild);
-            console.log("next", nextNode);
             nodeSteps.push(leftChild);
             break;
           } else {
@@ -136,7 +133,6 @@ export function BSTDemo() {
         } else if (nextNode.key > tree[i].key) {
           if (!isNode(tree[rightChild])) {
             tree[rightChild] = nextNode;
-            setAddedNode(rightChild);
             nodeSteps.push(rightChild);
             break;
           } else {
@@ -286,10 +282,6 @@ export function BSTDemo() {
         <Typography fontWeight="bold" sx={{ textDecoration: "underline" }}>
           Binary Search Tree Demo
         </Typography>
-        <Grid display="flex" flexDirection="row" margin=".2rem 0 .5rem">
-          <OperationDescription backgroundColor="greenyellow" text="ADDED" />
-          <OperationDescription backgroundColor="#ff4d00" text="TO REMOVE" />
-        </Grid>
         <Grid
           display="flex"
           flexDirection="column"
@@ -301,13 +293,7 @@ export function BSTDemo() {
           sx={{ backgroundColor: "black", opacity: 0.85 }}
         >
           {new Array(4).fill(true).map((_, height) => (
-            <BinaryTreeRow
-              nodes={keys}
-              height={height}
-              phaseNode={phaseNode}
-              removeNode={nextRemove}
-              addedNode={addedNode}
-            />
+            <BinaryTreeRow nodes={keys} height={height} phaseNode={phaseNode} />
           ))}
         </Grid>
         <OperationButton
