@@ -86,7 +86,7 @@ export function StackPage() {
       <PageButtons
         forwardTitle="QUEUE"
         forwardTo={href.ds.queue}
-        backTitle="HOME"
+        backTitle="DATA STRUCTURES"
         backTo={href.ds.home}
       />
     </DSContainer>

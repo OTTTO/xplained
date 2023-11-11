@@ -5,7 +5,7 @@ import { href } from "misc/href";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export function Index() {
+export function DataStructures() {
   useEffect(() => {
     document.getElementById("outerGrid").scrollIntoView();
   }, []);
@@ -70,7 +70,13 @@ export function Index() {
           <li>Depth First Search</li>
         </ul>
       </DSTypography>
-      <PageButtons forwardTitle="STACK" forwardTo={href.ds.stack} isHome />
+      <PageButtons
+        forwardTitle="STACK"
+        forwardTo={href.ds.stack}
+        backTitle="HOME"
+        backTo={href.home}
+        isHome
+      />
     </DSContainer>
   );
 }
