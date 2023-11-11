@@ -2,13 +2,7 @@ import { Grid } from "@mui/material";
 import { BinaryTreeChildren } from "./BinaryTreeChildren";
 import { BinaryTreeNode } from "./BinaryTreeNode";
 
-export function BinaryTreeRow({
-  nodes,
-  height,
-  removeNode = undefined,
-  addedNode,
-  phaseNode,
-}) {
+export function BinaryTreeRow({ nodes, height, phaseNode }) {
   const getRow = () => {
     let start = 0;
     for (let i = 0; i < height; i++) {
@@ -39,13 +33,7 @@ export function BinaryTreeRow({
     >
       <>
         {height === 0 ? (
-          <BinaryTreeNode
-            data={nodes[0]}
-            node={0}
-            removeNode={removeNode}
-            addedNode={addedNode}
-            phaseNode={phaseNode}
-          />
+          <BinaryTreeNode data={nodes[0]} node={0} phaseNode={phaseNode} />
         ) : (
           getRow().map((el, i) => (
             <BinaryTreeChildren
@@ -53,8 +41,6 @@ export function BinaryTreeRow({
               right={el.right}
               height={height}
               group={i}
-              removeNode={removeNode}
-              addedNode={addedNode}
               phaseNode={phaseNode}
             />
           ))
