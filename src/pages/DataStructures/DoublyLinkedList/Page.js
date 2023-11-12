@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { CodeBlock } from "components/CodeBlock";
-import { PageButtons } from "components/PageButtons";
-import { DSDivider } from "components/DSDivider";
-import { DSContainer } from "components/DSContainer";
-import { DSTypography } from "components/DSTypography";
+import { CodeBlock } from "components/CodeBlock/CodeBlock";
+import { PageButtons } from "components/Common/PageButtons";
+import { MainDivider } from "components/Common/Divider";
+import { MainContainer } from "components/Common/MainContainer";
+import { MainTypography } from "components/Common/MainTypography";
 import { codeSnippets } from "misc/codeSnippets";
 import { href } from "misc/href";
 import { DLLDemo } from "./Demo";
@@ -14,8 +14,8 @@ export function DLLPage() {
   }, []);
 
   return (
-    <DSContainer title="DOUBLY LINKED LIST">
-      <DSTypography>
+    <MainContainer title="DOUBLY LINKED LIST">
+      <MainTypography>
         <p>
           A doubly linked list follows the same concept as a singly linked list
           except there can be addition/deletion/traversal from either the tail
@@ -31,13 +31,13 @@ export function DLLPage() {
           Below is an implementation of a doubly linked list with some
           explanation.
         </p>
-        <DSDivider />
+        <MainDivider />
         <p>
           The Nodes it uses are the same except they also include a reference to
           the previous node, <b>prev</b>.
         </p>
         <CodeBlock text={codeSnippets.dll.node} title="node" width="20rem" />
-        <DSDivider />
+        <MainDivider />
         <p>
           The doubly linked list contains the same properties as its counterpart
           - <b>size</b>, <b>tail</b>, and <b>head</b>. The connection of the
@@ -49,7 +49,7 @@ export function DLLPage() {
           </p>
         </p>
         <CodeBlock text={codeSnippets.dll.class} title="doubly linked list" />
-        <DSDivider />
+        <MainDivider />
         <p>
           This getNode method is a helper method as it grabs the actual node,
           our user should only be concerned about the data and not node ojects.
@@ -57,7 +57,7 @@ export function DLLPage() {
           this data structure.
         </p>
         <CodeBlock text={codeSnippets.dll.getNode} title="get node" />
-        <DSDivider />
+        <MainDivider />
         <p>
           The ability to insert a node before another in the list makes this
           data structure comparable to an array in terms of functionality. The
@@ -66,7 +66,7 @@ export function DLLPage() {
           node that we are inserting and the nodes before/after that node.
         </p>
         <CodeBlock text={codeSnippets.dll.insertBefore} title="insert before" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Prepending a node to the doubly linked list is insertion at the tail.
           If the list is empty we just set the tail and head to be that node.
@@ -74,40 +74,40 @@ export function DLLPage() {
           before the 0th index.
         </p>
         <CodeBlock text={codeSnippets.dll.prepend} title="prepend" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Inserting after is just as useful as insertBefore and the logic is
           almost entirely the same except we must wire up our nodes in the
           reverse order.
         </p>
         <CodeBlock text={codeSnippets.dll.insertAfter} title="insert after" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Appending a node is the opposite of prepending, we are inserting at
           the head of the list. The logic here is the same except we call
           insertAfter with the last index instead of insertBefore with the 0th.
         </p>
         <CodeBlock text={codeSnippets.dll.append} title="append" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Getting the data from a node is very simple when leveraging the helper
           method of the same name. We get the node and then return the data.
         </p>
         <CodeBlock text={codeSnippets.dll.get} title="get" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Removing a node from a doubly linked list is almost exactly the same
           as removing form a singly linked list. Except in the case of removing
           the head, we must also reset the head to be the previous node.
         </p>
         <CodeBlock text={codeSnippets.dll.remove} title="remove" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Once again, we have the length method here as an easy wasy for the
           user to iterate over the list.
         </p>
         <CodeBlock text={codeSnippets.dll.length} title="length" />
-        <DSDivider />
+        <MainDivider />
         <p>
           We can easily mock a doubly linked list with a list in JS or Python
           but in praticality this would not make sense since the algorithmic
@@ -115,15 +115,15 @@ export function DLLPage() {
           of an array as opposed to a linked list defeating the purpose of using
           this data structure in the first place.
         </p>
-        <DSDivider />
+        <MainDivider />
         <DLLDemo />
-      </DSTypography>
+      </MainTypography>
       <PageButtons
         backTitle="SINGLY LINKED LIST"
         backTo={href.ds.sll}
         forwardTitle="BINARY SEARCH TREE"
         forwardTo={href.ds.bst}
       />
-    </DSContainer>
+    </MainContainer>
   );
 }

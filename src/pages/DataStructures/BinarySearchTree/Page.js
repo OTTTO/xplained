@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { codeSnippets } from "misc/codeSnippets";
-import { CodeBlock } from "components/CodeBlock";
-import { PageButtons } from "components/PageButtons";
+import { CodeBlock } from "components/CodeBlock/CodeBlock";
+import { PageButtons } from "components/Common/PageButtons";
 import { BSTDemo } from "./Demo";
-import { DSDivider } from "components/DSDivider";
-import { DSContainer } from "components/DSContainer";
+import { MainDivider } from "components/Common/Divider";
+import { MainContainer } from "components/Common/MainContainer";
 import { href } from "misc/href";
-import { DSTypography } from "components/DSTypography";
+import { MainTypography } from "components/Common/MainTypography";
 
 export function BSTPage() {
   useEffect(() => {
@@ -14,8 +14,8 @@ export function BSTPage() {
   }, []);
 
   return (
-    <DSContainer title="BINARY SEARCH TREE">
-      <DSTypography>
+    <MainContainer title="BINARY SEARCH TREE">
+      <MainTypography>
         <p>
           While sequential data structures are all lined up in sequence either
           front to back or top down, trees branch out with nodes in multiple
@@ -36,7 +36,7 @@ export function BSTPage() {
           The height of a tree is the number of steps between the root node and
           the lowest leaf.
         </p>
-        <DSDivider />
+        <MainDivider />
         <p>
           A binary tree is a tree where each node has at most two children. Each
           node can have a left and/or right child. In a binary search tree
@@ -66,7 +66,7 @@ export function BSTPage() {
           Below is an implementation of a binary search tree with some
           explanation.
         </p>
-        <DSDivider />
+        <MainDivider />
         <p>
           Unlike the sequential data structures, BSTs only require a single
           class for their operations. This class contains 4 properties -{" "}
@@ -77,7 +77,7 @@ export function BSTPage() {
           first node will always be the root and then we climb down from there.
         </p>
         <CodeBlock text={codeSnippets.bst.class} title="binary search tree" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Insertion into a BST is simple. If there is no root we simply set the
           node with the key and the data, otherwise we recurse to the left or
@@ -86,7 +86,7 @@ export function BSTPage() {
           the actual insertion.
         </p>
         <CodeBlock text={codeSnippets.bst.insert} title="insert" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Checking if an element exists is how we search for elements in a BST.
           It is done by recursively climbing down the children looking for the
@@ -95,14 +95,14 @@ export function BSTPage() {
           present.
         </p>
         <CodeBlock text={codeSnippets.bst.exists} title="exists" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Getting an element is done exactly the same as checking if it exists
           but instead of returning a boolean we return the data of that node or
           a null value if we don't find it.
         </p>
         <CodeBlock text={codeSnippets.bst.get} title="get" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Find the minimum child of any given node. This is used to find the
           successor when we delete a node that has both a left and right child.
@@ -110,14 +110,14 @@ export function BSTPage() {
           the place of the deleted node.
         </p>
         <CodeBlock text={codeSnippets.bst.min} title="min" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Some simple logic is needed to replace the root node when it only has
           one child. We have extracted this as a helper method because to clean
           up the delete method.
         </p>
         <CodeBlock text={codeSnippets.bst.replaceRoot} title="replace root" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Deleting a node also involves recursing the tree until the key is
           found. Once the key is found, we follow various means to delete it.
@@ -126,15 +126,15 @@ export function BSTPage() {
           child.
         </p>
         <CodeBlock text={codeSnippets.bst.delete} title="delete" />
-        <DSDivider />
+        <MainDivider />
         <BSTDemo />
-      </DSTypography>
+      </MainTypography>
       <PageButtons
         backTitle="DOUBLY LINKED LIST"
         backTo={href.ds.dll}
         forwardTitle="HEAP"
         forwardTo={href.ds.heap}
       />
-    </DSContainer>
+    </MainContainer>
   );
 }

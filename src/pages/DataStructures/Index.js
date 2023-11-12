@@ -1,6 +1,7 @@
-import { DSContainer } from "components/DSContainer";
-import { DSTypography } from "components/DSTypography";
-import { PageButtons } from "components/PageButtons";
+import { MainDivider } from "components/Common/Divider";
+import { MainContainer } from "components/Common/MainContainer";
+import { MainTypography } from "components/Common/MainTypography";
+import { PageButtons } from "components/Common/PageButtons";
 import { href } from "misc/href";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -10,8 +11,8 @@ export function DataStructures() {
     document.getElementById("outerGrid").scrollIntoView();
   }, []);
   return (
-    <DSContainer title="DATA STRUCTURES">
-      <DSTypography>
+    <MainContainer title="DATA STRUCTURES">
+      <MainTypography>
         <p>
           If you have ever written any code, you have most likely already worked
           with a number of data structures. Arrays and strings are probably the
@@ -19,22 +20,22 @@ export function DataStructures() {
           followed by Hashmaps (dictionaries in Python and objects in JS).
         </p>
         <p>
-          {" "}
           Data structures hold data and can be manipulated in certain ways to
           retrieve that data. The means by which we store and get the data out
           of a data structure is what allows us to leverage them throughout our
-          code to write algorithms for specific problems.{" "}
+          code to write algorithms for specific problems.
         </p>
         <p>
           It is to be remembered that data structures are really just abstract
           data types, meaning that they are interfaces that conform to a certain
           contract. What matters is that we can interact with them in a
-          predictable manner regardless of the underlying implementation.{" "}
+          predictable manner regardless of the underlying implementation.
         </p>
         <p>
           There are a handful of data structures that can be useful in certain
           circumstances which you can learn about below.
         </p>
+        <MainDivider />
         <h2 style={{ marginBottom: 0 }}>SEQUENTIAL</h2>
         <ul style={{ marginTop: 0 }}>
           <li>
@@ -69,7 +70,7 @@ export function DataStructures() {
           <li>Breadth First Search</li>
           <li>Depth First Search</li>
         </ul>
-      </DSTypography>
+      </MainTypography>
       <PageButtons
         forwardTitle="STACK"
         forwardTo={href.ds.stack}
@@ -77,6 +78,6 @@ export function DataStructures() {
         backTo={href.home}
         isHome
       />
-    </DSContainer>
+    </MainContainer>
   );
 }

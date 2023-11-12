@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import { OperationButton } from "components/OperationButton";
+import { OperationButton } from "components/LinkedListDemo/OperationButton";
 import { useState } from "react";
 import {
   getRandomInt,

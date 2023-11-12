@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
-import { DSContainer } from "components/DSContainer";
-import { DSTypography } from "components/DSTypography";
-import { HomeButton } from "components/HomeButton";
+import { MainContainer } from "components/Common/MainContainer";
+import { MainTypography } from "components/Common/MainTypography";
+import { HomeButton } from "components/Misc/HomeButton";
 import { href } from "misc/href";
 import { useEffect } from "react";
 
@@ -10,8 +10,8 @@ export function Home() {
     document.getElementById("outerGrid").scrollIntoView();
   }, []);
   return (
-    <DSContainer title="XPLAINED.FYI">
-      <DSTypography>
+    <MainContainer title="XPLAINED.FYI">
+      <MainTypography>
         <p>Welcome!</p>
         <p>
           Here it is our goal to explain to you the building blocks of software
@@ -26,12 +26,12 @@ export function Home() {
             or algorithms path below.
           </p>
         </p>
-      </DSTypography>
+      </MainTypography>
 
       <Grid display="flex" flexDirection="column" textAlign="center">
         <HomeButton to={href.ds.home} text="DATA STRUCTURES" top />
         <HomeButton to={href.algo.home} text="ALGORITHMS" bottom />
       </Grid>
-    </DSContainer>
+    </MainContainer>
   );
 }

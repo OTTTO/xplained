@@ -1,5 +1,5 @@
 import { Divider } from "@mui/material";
 
-export function DSDivider() {
+export function MainDivider() {
   return <Divider sx={{ backgroundColor: "black", borderBottomWidth: 4 }} />;
 }

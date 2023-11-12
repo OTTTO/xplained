@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { codeSnippets } from "misc/codeSnippets";
-import { CodeBlock } from "components/CodeBlock";
-import { PageButtons } from "components/PageButtons";
+import { CodeBlock } from "components/CodeBlock/CodeBlock";
+import { PageButtons } from "components/Common/PageButtons";
 import { QueueDemo } from "./Demo";
-import { DSDivider } from "components/DSDivider";
-import { DSContainer } from "components/DSContainer";
-import { DSTypography } from "components/DSTypography";
+import { MainDivider } from "components/Common/Divider";
+import { MainContainer } from "components/Common/MainContainer";
+import { MainTypography } from "components/Common/MainTypography";
 import { href } from "misc/href";
 
 export function QueuePage() {
@@ -14,8 +14,8 @@ export function QueuePage() {
   }, []);
 
   return (
-    <DSContainer title="QUEUE">
-      <DSTypography>
+    <MainContainer title="QUEUE">
+      <MainTypography>
         <p>
           You are probably familiar with the term queue, as in the queue (or
           line) at the movie theater. The first person that goes into the queue,
@@ -34,7 +34,7 @@ export function QueuePage() {
           <li>Iteratively invert a binary tree</li>
         </ul>
         <p>Below is an implementation of a queue with some explanation.</p>
-        <DSDivider />
+        <MainDivider />
         <p>
           Just like the Stack class, the Queue operates on Nodes. The first two
           properties are the same - <b>data</b> and <b>next</b>. But for the
@@ -44,14 +44,14 @@ export function QueuePage() {
           new head.{" "}
         </p>
         <CodeBlock text={codeSnippets.queue.node} title="node" />
-        <DSDivider />
+        <MainDivider />
         <p>
           The minimum Queue class contains just 2 properties - <b>tail</b> which
           is a reference to the rear of the queue and <b>head</b> which is a
           reference to the front.
         </p>
         <CodeBlock text={codeSnippets.queue.class} title="queue" />
-        <DSDivider />
+        <MainDivider />
         <p>
           To add a node to the back of the queue, we enqueue it by pointing the
           new node to the current tail, pointing the current tail back to the
@@ -60,7 +60,7 @@ export function QueuePage() {
           as the new node.
         </p>
         <CodeBlock text={codeSnippets.queue.enqueue} title="enqueue" />
-        <DSDivider />
+        <MainDivider />
         <p>
           When we return and remove, or deque, a node from the queue we simply
           reset the head to point to the previous node in the queue. Logic
@@ -68,7 +68,7 @@ export function QueuePage() {
           we essentially reset the queue.
         </p>
         <CodeBlock text={codeSnippets.queue.deque} title="deque" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Just like stacks, in both JavaScript and Python, a list can serve as a
           queue. Although as we will see, the way by which this is done is not
@@ -79,15 +79,15 @@ export function QueuePage() {
           title="built in queue"
           width="20rem"
         />
-        <DSDivider />
+        <MainDivider />
         <QueueDemo />
-      </DSTypography>
+      </MainTypography>
       <PageButtons
         backTitle="STACK"
         backTo={href.ds.stack}
         forwardTitle="SINGLY LINKED LIST"
         forwardTo={href.ds.sll}
       />
-    </DSContainer>
+    </MainContainer>
   );
 }

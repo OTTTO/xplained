@@ -1,9 +1,8 @@
 import { Grid, Typography } from "@mui/material";
-import { BinaryTreeRow } from "components/BinaryTree/BinaryTreeRow";
-import { OperationButton } from "components/OperationButton";
-import { OperationDescription } from "components/OperationDescription";
+import { BinaryTreeRow } from "components/BinaryTreeDemo/BinaryTreeRow";
+import { OperationButton } from "components/LinkedListDemo/OperationButton";
 import { useState } from "react";
-import { getRandomInt } from "utils/utils";
+import { getRandomInt, sleep } from "utils/utils";
 
 export function HeapDemo() {
   const [heap, setHeap] = useState([]);
@@ -15,12 +14,11 @@ export function HeapDemo() {
   const isEmpty = heap.length === 0;
 
   const timeout = 700;
-  const setPhaseNodes = (nodeSteps, heapArr) => {
+  const setPhaseNodes = async (nodeSteps, heapArr) => {
     for (let i = 0; i < nodeSteps.length; i++) {
-      setTimeout(() => {
-        setHeap(heapArr[i]);
-        setPhaseNode(nodeSteps[i]);
-      }, timeout * i);
+      setHeap(heapArr[i]);
+      setPhaseNode(nodeSteps[i]);
+      await sleep(timeout);
     }
   };
 
@@ -46,7 +44,7 @@ export function HeapDemo() {
     return curr;
   };
 
-  const insert = () => {
+  const insert = async () => {
     setButtonsDisabled(true);
     let curr = size();
     let parent = Math.ceil(curr / 2) - 1;
@@ -57,16 +55,10 @@ export function HeapDemo() {
 
     curr = siftUp(curr, parent, nodeSteps, heapArr);
 
-    const lastNode = nodeSteps.length - 1;
-    const timeoutMul = lastNode;
-
-    setPhaseNodes(nodeSteps, heapArr);
+    await setPhaseNodes(nodeSteps, heapArr);
     setNextNode(getNextNode());
-
-    setTimeout(() => {
-      setPhaseNode(undefined);
-      setButtonsDisabled(false);
-    }, timeout * (timeoutMul + 1));
+    setPhaseNode(undefined);
+    setButtonsDisabled(false);
   };
 
   const siftDown = (parent, nodeSteps, heapArr) => {
@@ -83,7 +75,7 @@ export function HeapDemo() {
     }
   };
 
-  const extractMax = () => {
+  const extractMax = async () => {
     setButtonsDisabled(true);
     const nodeSteps = [];
     const heapArr = [];
@@ -102,16 +94,13 @@ export function HeapDemo() {
       siftDown(0, nodeSteps, heapArr);
     }
 
-    const lastNode = nodeSteps.length - 1;
-    const timeoutMul = lastNode;
-
-    setPhaseNodes(nodeSteps, heapArr);
+    await setPhaseNodes(nodeSteps, heapArr);
     setNextNode(getNextNode());
 
-    setTimeout(() => {
-      setPhaseNode(undefined);
-      setButtonsDisabled(false);
-    }, timeout * (timeoutMul + 1));
+    await sleep(timeout);
+    setPhaseNode(undefined);
+    setButtonsDisabled(false);
+
     return max_;
   };
 

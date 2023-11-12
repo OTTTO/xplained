@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { codeSnippets } from "misc/codeSnippets";
-import { CodeBlock } from "components/CodeBlock";
+import { CodeBlock } from "components/CodeBlock/CodeBlock";
 import { StackDemo } from "./Demo";
-import { PageButtons } from "components/PageButtons";
-import { DSDivider } from "components/DSDivider";
-import { DSTypography } from "components/DSTypography";
-import { DSContainer } from "components/DSContainer";
+import { PageButtons } from "components/Common/PageButtons";
+import { MainDivider } from "components/Common/Divider";
+import { MainTypography } from "components/Common/MainTypography";
+import { MainContainer } from "components/Common/MainContainer";
 import { href } from "misc/href";
 
 export function StackPage() {
@@ -14,8 +14,8 @@ export function StackPage() {
   }, []);
 
   return (
-    <DSContainer title="STACK">
-      <DSTypography>
+    <MainContainer title="STACK">
+      <MainTypography>
         <p>
           A stack is a Last In First Out or LIFO data structure. That means that
           the first data to come in is the last data to come out. You can
@@ -29,7 +29,7 @@ export function StackPage() {
           <li>Parenthesis matching</li>{" "}
         </ul>
         <p>Below is an implementation of a stack with some explanation.</p>
-        <DSDivider />
+        <MainDivider />
         <p>
           First we need a way to represent the elements that are going to be
           added to the stack. We do this with a Node class which has a property
@@ -38,7 +38,7 @@ export function StackPage() {
           it.
         </p>
         <CodeBlock text={codeSnippets.stack.node} title="node" />
-        <DSDivider />
+        <MainDivider />
         <p>
           The minimum implementation of Stack class itself contains only 1
           property, <b>top</b>, which as the name implies, always points to the
@@ -49,27 +49,27 @@ export function StackPage() {
           title="stack"
           width="20rem"
         />
-        <DSDivider />
+        <MainDivider />
         <p>
           We add nodes to the stack by "pushing" them on the top. This sets the
           newly added node to be the top and points it to the old top in order
           to extend the stack.
         </p>
         <CodeBlock text={codeSnippets.stack.push} title="push" />
-        <DSDivider />
+        <MainDivider />
         <p>
           We remove nodes in a LIFO fashion by popping the top of the stack,
           which returns the top data and resets the top to be the next node down
           (even if that node is null or None).
         </p>
         <CodeBlock text={codeSnippets.stack.pop} title="pop" />
-        <DSDivider />
+        <MainDivider />
         <p>
           If we just want to see what the top of the stack is or get the top
           data, we use peek instead of pop.
         </p>
         <CodeBlock text={codeSnippets.stack.peek} title="peek" />
-        <DSDivider />
+        <MainDivider />
         <p>
           In many languages you don't need to implement a stack yourself or even
           import it. For example, in both JavaScript and Python, a list can
@@ -80,15 +80,15 @@ export function StackPage() {
           title="built in stack"
           width="20rem"
         />
-        <DSDivider />
+        <MainDivider />
         <StackDemo />
-      </DSTypography>
+      </MainTypography>
       <PageButtons
         forwardTitle="QUEUE"
         forwardTo={href.ds.queue}
         backTitle="DATA STRUCTURES"
         backTo={href.ds.home}
       />
-    </DSContainer>
+    </MainContainer>
   );
 }

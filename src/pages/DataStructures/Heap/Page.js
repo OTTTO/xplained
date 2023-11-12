@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { codeSnippets } from "misc/codeSnippets";
-import { CodeBlock } from "components/CodeBlock";
-import { PageButtons } from "components/PageButtons";
+import { CodeBlock } from "components/CodeBlock/CodeBlock";
+import { PageButtons } from "components/Common/PageButtons";
 import { HeapDemo } from "./Demo";
-import { DSDivider } from "components/DSDivider";
-import { DSContainer } from "components/DSContainer";
+import { MainDivider } from "components/Common/Divider";
+import { MainContainer } from "components/Common/MainContainer";
 import { href } from "misc/href";
-import { DSTypography } from "components/DSTypography";
+import { MainTypography } from "components/Common/MainTypography";
 
 export function HeapPage() {
   useEffect(() => {
@@ -14,8 +14,8 @@ export function HeapPage() {
   }, []);
 
   return (
-    <DSContainer title="HEAP">
-      <DSTypography>
+    <MainContainer title="HEAP">
+      <MainTypography>
         <p>
           A heap is another type of binary tree whose main application is
           utilizing its ability to always access the smallest element (Min Heap)
@@ -32,7 +32,7 @@ export function HeapPage() {
           the highest priority, it is guaranteed that the next ticket you pull
           will be a 5 if there is one in the heap.
         </p>
-        <DSDivider />
+        <MainDivider />
         <p>
           Although the heap is considered a tree data structure based on how we
           see it visualized. Heaps have some interesting properties which make
@@ -53,7 +53,7 @@ export function HeapPage() {
             </li>
           </ul>
         </p>
-        <DSDivider />
+        <MainDivider />
         <p>
           The heap class only contains one property, heap, which is the array
           where the heap's elements are stored.
@@ -62,21 +62,21 @@ export function HeapPage() {
         <CodeBlock text={codeSnippets.heap.size} title="size" />
         <CodeBlock text={codeSnippets.heap.max} title="max" />
         <CodeBlock text={codeSnippets.heap.swap} title="swap" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Helper function that sifts an element up to its rightful place. This
           is used whenever we insert an element since during insertion the
           element is initially placed at the end of the heap.
         </p>
         <CodeBlock text={codeSnippets.heap.siftUp} title="sift up" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Inserting elements is how we add them to the heap. We simply append
           the element to the end of the heap and then sift it up until all the
           heap properties are satisfied again.
         </p>
         <CodeBlock text={codeSnippets.heap.insert} title="insert" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Helper function that sifts an element down to it's rightful place. We
           recursively find the bigger child belonging to the current node
@@ -85,7 +85,7 @@ export function HeapPage() {
           the heap.
         </p>
         <CodeBlock text={codeSnippets.heap.siftDown} title="sift down" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Extract (remove and return) the max element from the heap. We save the
           max element and then replace it with the last element which we then
@@ -93,12 +93,12 @@ export function HeapPage() {
           the client calls to get the next element in a priority queue
         </p>
         <CodeBlock text={codeSnippets.heap.extractMax} title="extract max" />
-        <DSDivider />
+        <MainDivider />
         <CodeBlock text={codeSnippets.heap.heapify} title="heapify" />
-        <DSDivider />
+        <MainDivider />
         <HeapDemo />
-      </DSTypography>
+      </MainTypography>
       <PageButtons backTitle="Binary Search Tree" backTo={href.ds.bst} />
-    </DSContainer>
+    </MainContainer>
   );
 }

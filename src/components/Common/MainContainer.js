@@ -2,12 +2,12 @@ import { Grid } from "@mui/material";
 import { Title } from "./Title";
 import { Footer } from "./Footer";
 
-export function DSContainer({ title, children }) {
+export function MainContainer({ title, children }) {
   return (
     <Grid
       id="outerGrid"
-      paddingTop="1rem"
-      border="1px solid black"
+      paddingTop=".5rem"
+      borderTop="3px solid black"
       backgroundColor="#f9f9f9"
     >
       <Grid container direction="column" margin="0 auto">

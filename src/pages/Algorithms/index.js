@@ -1,6 +1,7 @@
-import { DSContainer } from "components/DSContainer";
-import { DSTypography } from "components/DSTypography";
-import { PageButtons } from "components/PageButtons";
+import { MainDivider } from "components/Common/Divider";
+import { MainContainer } from "components/Common/MainContainer";
+import { MainTypography } from "components/Common/MainTypography";
+import { PageButtons } from "components/Common/PageButtons";
 import { href } from "misc/href";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -10,8 +11,8 @@ export function Algorithms() {
     document.getElementById("outerGrid").scrollIntoView();
   }, []);
   return (
-    <DSContainer title="ALGORITHMS">
-      <DSTypography>
+    <MainContainer title="ALGORITHMS">
+      <MainTypography>
         <p>
           Algorithms are how we solve problems in computer science. We are
           essentially giving the computer a list of instructions to follow to
@@ -31,6 +32,7 @@ export function Algorithms() {
           an interview. At the very least, studying them should help you become
           a better developer.
         </p>
+        <MainDivider />
         <h2 style={{ marginBottom: 0 }}>ARRAYS AND STRINGS</h2>
         <ul style={{ marginTop: 0 }}>
           <li>
@@ -62,8 +64,8 @@ export function Algorithms() {
           <li>Subsequence</li>
           <li>Find addends</li>
         </ul>
-      </DSTypography>
+      </MainTypography>
       <PageButtons backTitle="HOME" backTo={href.home} isHome />
-    </DSContainer>
+    </MainContainer>
   );
 }

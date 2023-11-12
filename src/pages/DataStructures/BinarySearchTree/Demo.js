@@ -1,10 +1,9 @@
 import { Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { getRandomInt } from "utils/utils";
-import { BinaryTreeRow } from "../../../components/BinaryTree/BinaryTreeRow";
+import { getRandomInt, sleep } from "utils/utils";
+import { BinaryTreeRow } from "../../../components/BinaryTreeDemo/BinaryTreeRow";
 import numToWords from "num-to-words";
-import { OperationDescription } from "components/OperationDescription";
-import { OperationButton } from "components/OperationButton";
+import { OperationButton } from "components/LinkedListDemo/OperationButton";
 
 // height: 0
 // nodes per row: 2^h
@@ -32,11 +31,10 @@ export function BSTDemo() {
 
   const isNode = (node) => node?.key || node?.key === 0;
 
-  const setPhaseNodes = (nodeSteps) => {
+  const setPhaseNodes = async (nodeSteps) => {
     for (let i = 0; i < nodeSteps.length - 1; i++) {
-      setTimeout(() => {
-        setPhaseNode(nodeSteps[i]);
-      }, timeout * i);
+      setPhaseNode(nodeSteps[i]);
+      await sleep(timeout);
     }
   };
 
@@ -112,7 +110,7 @@ export function BSTDemo() {
     return node;
   };
 
-  const insert = () => {
+  const insert = async () => {
     setButtonsDisabled(true);
     const tree = [...bst];
     const nodeSteps = [];
@@ -145,19 +143,16 @@ export function BSTDemo() {
     const lastNode = nodeSteps.length - 1;
     const timeoutMul = lastNode;
 
-    setPhaseNodes(nodeSteps);
+    await setPhaseNodes(nodeSteps);
 
-    setTimeout(() => {
-      setBst(tree);
-      setPhaseNode(nodeSteps[lastNode]);
-      setNextNode(getNextNode(tree));
-      setViewGet(false);
-    }, timeout * timeoutMul);
+    setBst(tree);
+    setPhaseNode(nodeSteps[lastNode]);
+    setNextNode(getNextNode(tree));
+    setViewGet(false);
 
-    setTimeout(() => {
-      setPhaseNode(undefined);
-      setButtonsDisabled(false);
-    }, timeout * (timeoutMul + 1));
+    await sleep(timeout);
+    setPhaseNode(undefined);
+    setButtonsDisabled(false);
   };
 
   const minIdx = (tree, idx) => {
@@ -168,7 +163,7 @@ export function BSTDemo() {
     }
   };
 
-  const deleteNode = () => {
+  const deleteNode = async () => {
     setButtonsDisabled(true);
     const tree = [...bst];
     const rmKey = nextRemove;
@@ -218,23 +213,18 @@ export function BSTDemo() {
       }
     }
 
+    await setPhaseNodes(nodeSteps);
+
     const lastNode = nodeSteps.length - 1;
-    const timeoutMul = lastNode;
+    setPhaseNode(nodeSteps[lastNode]);
+    setFull(false);
+    setBst(tree);
+    setNextNode(getNextNode(tree));
+    setViewGet(false);
 
-    setPhaseNodes(nodeSteps);
-
-    setTimeout(() => {
-      setPhaseNode(nodeSteps[lastNode]);
-      setFull(false);
-      setBst(tree);
-      setNextNode(getNextNode(tree));
-      setViewGet(false);
-    }, timeout * timeoutMul);
-
-    setTimeout(() => {
-      setPhaseNode(undefined);
-      setButtonsDisabled(false);
-    }, timeout * (timeoutMul + 1));
+    await sleep(timeout);
+    setPhaseNode(undefined);
+    setButtonsDisabled(false);
   };
 
   const moveUp = (tree, idx) => {

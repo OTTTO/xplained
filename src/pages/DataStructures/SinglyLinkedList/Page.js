@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { CodeBlock } from "components/CodeBlock";
-import { PageButtons } from "components/PageButtons";
-import { DSDivider } from "components/DSDivider";
-import { DSContainer } from "components/DSContainer";
-import { DSTypography } from "components/DSTypography";
+import { CodeBlock } from "components/CodeBlock/CodeBlock";
+import { PageButtons } from "components/Common/PageButtons";
+import { MainDivider } from "components/Common/Divider";
+import { MainContainer } from "components/Common/MainContainer";
+import { MainTypography } from "components/Common/MainTypography";
 import { codeSnippets } from "misc/codeSnippets";
 import { href } from "misc/href";
 import { SLLDemo } from "./Demo";
@@ -14,8 +14,8 @@ export function SLLPage() {
   }, []);
 
   return (
-    <DSContainer title="SINGLY LINKED LIST">
-      <DSTypography>
+    <MainContainer title="SINGLY LINKED LIST">
+      <MainTypography>
         <p>
           A linked list is a sequential data structure. It behaves similarly to
           an array except that it has different algorithmic complexity meaning
@@ -46,14 +46,14 @@ export function SLLPage() {
           explanation. You will see the doubly linked list implementation on the
           next page.
         </p>
-        <DSDivider />
+        <MainDivider />
         <p>
           A singly linked list is composed of a sequence of Nodes which each
           contain <b>data</b> and a reference to the <b>next</b> Node in the
           list.
         </p>
         <CodeBlock text={codeSnippets.sll.node} title="node" width="20rem" />
-        <DSDivider />
+        <MainDivider />
         <p>
           The minimum implementation of a singly linked list consists of 3
           properties. <b>size</b> which tracks the length of the list. The other
@@ -62,7 +62,7 @@ export function SLLPage() {
           <b>{"[tail]->[node]->[head]"}</b>
         </p>
         <CodeBlock text={codeSnippets.sll.class} title="linked list" />
-        <DSDivider />
+        <MainDivider />
         <p>
           For a singly linked list, when we add a new node we append it to the
           front of the list. If the list is empty we simply set the tail to be
@@ -70,7 +70,7 @@ export function SLLPage() {
           the node on to the end.
         </p>
         <CodeBlock text={codeSnippets.sll.append} title="append" />
-        <DSDivider />
+        <MainDivider />
         <p>
           When we want to remove a node from the linked list, firt we make sure
           that the list is not empty and that the index is in bounds. We then
@@ -79,7 +79,7 @@ export function SLLPage() {
           remove, effectively dropping it from the linked list.
         </p>
         <CodeBlock text={codeSnippets.sll.remove} title="remove" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Getting a node from a linked list is simple, we do the same checks
           that were on the remove method - make sure the list is not empty and
@@ -89,7 +89,7 @@ export function SLLPage() {
           node's data.
         </p>
         <CodeBlock text={codeSnippets.sll.get} title="get" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Here we are simply returning the size of the list. This length method
           is useful to help us iterate the list with a for loop, a more advanced
@@ -97,22 +97,22 @@ export function SLLPage() {
           until it is exhausted.
         </p>
         <CodeBlock text={codeSnippets.sll.length} title="length" />
-        <DSDivider />
+        <MainDivider />
         <p>
           Unlike stacks and queues, we cannot use JS and Python Lists to mock
           Linked Lists as these lists are built as Array Lists with arrays that
           automatically resize behind the scenes - for most cases this defeats
           the purpose of Linked List.
         </p>
-        <DSDivider />
+        <MainDivider />
         <SLLDemo />
-      </DSTypography>
+      </MainTypography>
       <PageButtons
         backTitle="QUEUE"
         backTo={href.ds.queue}
         forwardTitle="DOUBLY LINKED LIST"
         forwardTo={href.ds.dll}
       />
-    </DSContainer>
+    </MainContainer>
   );
 }
