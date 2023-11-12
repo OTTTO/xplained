@@ -36,12 +36,13 @@ export function Algorithms() {
         <h2 style={{ marginBottom: 0 }}>ARRAYS AND STRINGS</h2>
         <ul style={{ marginTop: 0 }}>
           <li>
-            Reversal
-            <ul>Reverse a string or array</ul>
-          </li>
-          <li>
             Two Pointers
             <ul>
+              <li>
+                <Link to={href.algo.indexed.reverse}>
+                  Reverse a string or array
+                </Link>
+              </li>
               <li>Detect Palindrome</li>
               <li>Find sorted addends</li>
               <li>Subsequence</li>

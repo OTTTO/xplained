@@ -4,6 +4,7 @@ import { getRandomInt, sleep } from "utils/utils";
 import { BinaryTreeRow } from "../../../components/BinaryTreeDemo/BinaryTreeRow";
 import numToWords from "num-to-words";
 import { OperationButton } from "components/LinkedListDemo/OperationButton";
+import { DemoTitle } from "components/Common/DemoTitle";
 
 // height: 0
 // nodes per row: 2^h
@@ -269,9 +270,7 @@ export function BSTDemo() {
         justifyContent="center"
         alignItems="center"
       >
-        <Typography fontWeight="bold" sx={{ textDecoration: "underline" }}>
-          Binary Search Tree Demo
-        </Typography>
+        <DemoTitle title="BINARY SEARCH TREE DEMO" />
         <Grid
           display="flex"
           flexDirection="column"

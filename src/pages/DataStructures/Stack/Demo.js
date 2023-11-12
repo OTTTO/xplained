@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import { DemoTitle } from "components/Common/DemoTitle";
 import { OperationButton } from "components/LinkedListDemo/OperationButton";
 import { useState } from "react";
 import {
@@ -29,9 +30,7 @@ export function StackDemo() {
 
   return (
     <Grid margin="1rem auto 1rem" textAlign="center">
-      <Typography fontWeight="bold" sx={{ textDecoration: "underline" }}>
-        STACK DEMO
-      </Typography>
+      <DemoTitle title="STACK DEMO" />
       <Grid
         height="18rem"
         width="3rem"

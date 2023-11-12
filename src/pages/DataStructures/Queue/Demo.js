@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import { DemoTitle } from "components/Common/DemoTitle";
 import { OperationButton } from "components/LinkedListDemo/OperationButton";
 import { useState } from "react";
 import {
@@ -29,9 +30,7 @@ export function QueueDemo() {
 
   return (
     <Grid margin="1rem auto 1rem" textAlign="center">
-      <Typography fontWeight="bold" sx={{ textDecoration: "underline" }}>
-        QUEUE DEMO
-      </Typography>
+      <DemoTitle title="QUEUE DEMO" />
       <Grid
         height="3rem"
         width="16rem"

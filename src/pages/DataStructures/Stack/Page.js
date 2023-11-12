@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { codeSnippets } from "misc/codeSnippets";
+import { codeSnippets } from "misc/dsCodeSnippets";
 import { CodeBlock } from "components/CodeBlock/CodeBlock";
 import { StackDemo } from "./Demo";
 import { PageButtons } from "components/Common/PageButtons";

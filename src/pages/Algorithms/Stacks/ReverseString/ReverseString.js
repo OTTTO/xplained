@@ -4,7 +4,7 @@ import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import { DemoString } from "./DemoString";
 import { CodeBlock } from "../../../../../components/CodeBlock";
-import { codeSnippets } from "../../../../misc/codeSnippets";
+import { codeSnippets } from "../../../../misc/dsCodeSnippets";
 import { sleep } from "utils/utils";
 
 export function ReverseString() {

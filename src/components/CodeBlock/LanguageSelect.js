@@ -5,7 +5,7 @@ export function LanguageSelect({ language, setLanguage }) {
     { value: "python", label: "Python" },
     { value: "javascript", label: "JS" },
   ];
-
+  console.log("language select", language);
   const styles = {
     container: (base) => ({
       ...base,
@@ -24,7 +24,7 @@ export function LanguageSelect({ language, setLanguage }) {
     }),
   };
 
-  const getDefaultValue = (language) => {
+  const getValue = (language) => {
     for (let option of options) {
       if (option.value === language) return option;
     }
@@ -33,7 +33,8 @@ export function LanguageSelect({ language, setLanguage }) {
   return (
     <Select
       options={options}
-      defaultValue={getDefaultValue(language)}
+      value={getValue(language)}
+      defaultValue={getValue(language)}
       onChange={(option) => setLanguage(option.value)}
       styles={styles}
       isSearchable={false}

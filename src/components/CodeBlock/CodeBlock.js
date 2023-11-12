@@ -4,7 +4,7 @@ import { LanguageSelect } from "./LanguageSelect";
 import { useContext } from "react";
 import { LanguageContext } from "context/language";
 
-export function CodeBlock({ text, title, width }) {
+export function CodeBlock({ text, title }) {
   const { language, setLanguage } = useContext(LanguageContext);
   return (
     <Grid width="25rem" margin="0 auto 1rem" maxWidth="100%">

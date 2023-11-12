@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import { DemoTitle } from "components/Common/DemoTitle";
 import { OperationButton } from "components/LinkedListDemo/OperationButton";
 import { OperationDescription } from "components/LinkedListDemo/OperationDescription";
 import { useState } from "react";
@@ -51,9 +52,7 @@ export function SLLDemo() {
       flexDirection="column"
       alignItems="center"
     >
-      <Typography fontWeight="bold" sx={{ textDecoration: "underline" }}>
-        LINKED LIST DEMO
-      </Typography>
+      <DemoTitle title="LINKED LIST DEMO" />
       <Grid display="flex" flexDirection="row" margin=".2rem 0 .5rem">
         <OperationDescription backgroundColor="greenyellow" text="ADDED" />
         <OperationDescription backgroundColor="#ff4d00" text="TO REMOVE" />

@@ -4,7 +4,7 @@ import { PageButtons } from "components/Common/PageButtons";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
 import { MainTypography } from "components/Common/MainTypography";
-import { codeSnippets } from "misc/codeSnippets";
+import { codeSnippets } from "misc/dsCodeSnippets";
 import { href } from "misc/href";
 import { SLLDemo } from "./Demo";
 

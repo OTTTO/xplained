@@ -1,5 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import { BinaryTreeRow } from "components/BinaryTreeDemo/BinaryTreeRow";
+import { DemoTitle } from "components/Common/DemoTitle";
 import { OperationButton } from "components/LinkedListDemo/OperationButton";
 import { useState } from "react";
 import { getRandomInt, sleep } from "utils/utils";
@@ -113,9 +114,7 @@ export function HeapDemo() {
       alignItems="center"
       marginBottom="2rem"
     >
-      <Typography fontWeight="bold" sx={{ textDecoration: "underline" }}>
-        Heap Demo
-      </Typography>
+      <DemoTitle title="HEAP DEMO" />
       <Grid
         display="flex"
         flexDirection="column"

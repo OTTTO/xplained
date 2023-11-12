@@ -12,7 +12,7 @@ export const href = {
   algo: {
     home: "/algo",
     indexed: {
-      reverse: "/algo/reverse",
+      reverse: "/algo/indexed/reverse",
     },
   },
 };
