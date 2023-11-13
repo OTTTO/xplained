@@ -1,82 +1,82 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { CodeBlock } from "components/CodeBlock/CodeBlock";
-import { AlgoButton } from "components/Common/AlgoButton";
+// import { AlgoButton } from "components/Common/AlgoButton";
 import { AlgoProblem } from "components/Common/AlgoProblem";
-import { DemoTitle } from "components/Common/DemoTitle";
-import { MainDivider } from "components/Common/Divider";
+// import { DemoTitle } from "components/Common/DemoTitle";
+// import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
 import { MainContent } from "components/Common/MainContent";
 import { PageButtons } from "components/Common/PageButtons";
-import { OperationDescription } from "components/LinkedListDemo/OperationDescription";
+// import { OperationDescription } from "components/LinkedListDemo/OperationDescription";
 import { codeSnippets } from "misc/algoCodeSnippets";
 import { href } from "misc/href";
-import { useState } from "react";
-import { sleep } from "utils/utils";
+// import { useState } from "react";
+// import { sleep } from "utils/utils";
 
 export function Reverse() {
-  const str = "1234567";
-  const [arr, setArr] = useState(str.split(""));
-  const [i, setI] = useState();
-  const [j, setJ] = useState();
-  const [temp, setTemp] = useState("");
-  const [buttonsDisabled, setButtonsDisabled] = useState(false);
+  // const str = "1234567";
+  // const [arr, setArr] = useState(str.split(""));
+  // const [i, setI] = useState();
+  // const [j, setJ] = useState();
+  // const [temp, setTemp] = useState("");
+  // const [buttonsDisabled, setButtonsDisabled] = useState(false);
 
-  const backgroundColor = (idx) => {
-    if (i === idx) return "blue";
-    if (j === idx) return "orange";
-    return "black";
-  };
+  // const backgroundColor = (idx) => {
+  //   if (i === idx) return "blue";
+  //   if (j === idx) return "orange";
+  //   return "black";
+  // };
 
-  const timeout = 1000;
-  const tempTimeout = 500;
+  // const timeout = 1000;
+  // const tempTimeout = 500;
 
-  const animate = async (iArray, jArray, tempArray, arrays) => {
-    console.log(arrays);
-    for (let k = 0; k < arrays.length; k++) {
-      setI(iArray[k]);
-      setJ(jArray[k]);
-      if (k > 0 && !(k % 2 === 0)) {
-        await sleep(tempTimeout);
-        setTemp(tempArray[Math.ceil(k / 2)]);
-        await sleep(tempTimeout);
-      }
-      setArr(arrays[k]);
-      await sleep(timeout);
-    }
-  };
+  // const animate = async (iArray, jArray, tempArray, arrays) => {
+  //   console.log(arrays);
+  //   for (let k = 0; k < arrays.length; k++) {
+  //     setI(iArray[k]);
+  //     setJ(jArray[k]);
+  //     if (k > 0 && !(k % 2 === 0)) {
+  //       await sleep(tempTimeout);
+  //       setTemp(tempArray[Math.ceil(k / 2)]);
+  //       await sleep(tempTimeout);
+  //     }
+  //     setArr(arrays[k]);
+  //     await sleep(timeout);
+  //   }
+  // };
 
-  const reverse = async () => {
-    setButtonsDisabled(true);
-    const arrCopy = [...arr];
-    let i = 0;
-    let j = arrCopy.length - 1;
+  // const reverse = async () => {
+  //   setButtonsDisabled(true);
+  //   const arrCopy = [...arr];
+  //   let i = 0;
+  //   let j = arrCopy.length - 1;
 
-    const arrays = [[...arrCopy]];
-    const iArray = [i];
-    const jArray = [j];
-    const tempArray = [""];
+  //   const arrays = [[...arrCopy]];
+  //   const iArray = [i];
+  //   const jArray = [j];
+  //   const tempArray = [""];
 
-    while (i < j) {
-      const temp = arrCopy[i];
-      tempArray.push(temp);
+  //   while (i < j) {
+  //     const temp = arrCopy[i];
+  //     tempArray.push(temp);
 
-      arrCopy[i] = arrCopy[j];
-      iArray.push(i);
-      jArray.push(j);
-      arrays.push([...arrCopy]);
+  //     arrCopy[i] = arrCopy[j];
+  //     iArray.push(i);
+  //     jArray.push(j);
+  //     arrays.push([...arrCopy]);
 
-      arrCopy[j] = temp;
-      iArray.push(i++);
-      jArray.push(j--);
-      arrays.push([...arrCopy]);
-    }
+  //     arrCopy[j] = temp;
+  //     iArray.push(i++);
+  //     jArray.push(j--);
+  //     arrays.push([...arrCopy]);
+  //   }
 
-    await animate(iArray, jArray, tempArray, arrays);
-    setI(undefined);
-    setJ(undefined);
-    setTemp("");
-    setButtonsDisabled(false);
-  };
+  //   await animate(iArray, jArray, tempArray, arrays);
+  //   setI(undefined);
+  //   setJ(undefined);
+  //   setTemp("");
+  //   setButtonsDisabled(false);
+  // };
   return (
     <MainContainer title="REVERSE">
       <MainContent>
@@ -107,7 +107,7 @@ export function Reverse() {
             text={codeSnippets.indexed.reverseStr}
             title="reverse string"
           />
-          <MainDivider />
+          {/* <MainDivider />
           <Grid textAlign="center" margin="0 auto" marginTop="1rem">
             <DemoTitle title="REVERSE ARRAY DEMO" />
             <Grid display="flex" justifyContent="center" margin=".2rem 0 .5rem">
@@ -134,7 +134,7 @@ export function Reverse() {
               disabled={buttonsDisabled}
               text="REVERSE"
             />
-          </Grid>
+          </Grid> */}
         </Grid>
       </MainContent>
       <PageButtons

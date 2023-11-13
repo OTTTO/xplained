@@ -17,10 +17,14 @@ export function MainContainer({ title, children }) {
       <Grid container direction="column" margin="0 auto">
         <Title title={title} />
         <Grid
+          container
           width="100%"
           maxWidth="800px"
           margin="0 auto"
           marginBottom="2.4rem"
+          minHeight="90vh"
+          direction="column"
+          flex="1"
         >
           {children}
         </Grid>

@@ -15,7 +15,12 @@ export function PageButtons({
   algo,
 }) {
   return (
-    <Grid display="flex" justifyContent="space-between" alignItems="center">
+    <Grid
+      marginTop="auto"
+      display="flex"
+      justifyContent="space-between"
+      alignItems="center"
+    >
       <Grid>
         {backTitle && backTo && (
           <Link to={backTo}>

@@ -19,12 +19,10 @@ export function Algorithms() {
           Studying algorithms is beneficial to us in order for us to become
           stronger software engineers. Throughout the following examples, we
           will see how to operate on all sorts of data structures and how to
-          accomplish many different tasks by applying the proper algorithm. The
-          visualizations should help you get a better understanding of what is
-          actually happening throughout the algorithm.
+          accomplish many different tasks by applying the proper algorithm.
         </p>
         <p>
-          The following algorithms you may find useful in the workplace or even
+          You may find the following algorithms useful in the workplace or even
           an interview. At the very least, studying them should help you become
           a better developer.
         </p>
