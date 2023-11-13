@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { codeSnippets } from "misc/dsCodeSnippets";
 import { CodeBlock } from "components/CodeBlock/CodeBlock";
 import { PageButtons } from "components/Common/PageButtons";
@@ -6,16 +5,12 @@ import { HeapDemo } from "./Demo";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
 import { href } from "misc/href";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 
 export function HeapPage() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
-
   return (
     <MainContainer title="HEAP">
-      <MainTypography>
+      <MainContent>
         <p>
           A heap is another type of binary tree whose main application is
           utilizing its ability to always access the smallest element (Min Heap)
@@ -97,7 +92,7 @@ export function HeapPage() {
         <CodeBlock text={codeSnippets.heap.heapify} title="heapify" />
         <MainDivider />
         <HeapDemo />
-      </MainTypography>
+      </MainContent>
       <PageButtons backTitle="Binary Search Tree" backTo={href.ds.bst} />
     </MainContainer>
   );

@@ -1,18 +1,14 @@
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 import { PageButtons } from "components/Common/PageButtons";
 import { href } from "misc/href";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export function Algorithms() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
   return (
     <MainContainer title="ALGORITHMS">
-      <MainTypography>
+      <MainContent>
         <p>
           Algorithms are how we solve problems in computer science. We are
           essentially giving the computer a list of instructions to follow to
@@ -65,7 +61,7 @@ export function Algorithms() {
           <li>Subsequence</li>
           <li>Find addends</li>
         </ul>
-      </MainTypography>
+      </MainContent>
       <PageButtons backTitle="HOME" backTo={href.home} isHome />
     </MainContainer>
   );

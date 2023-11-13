@@ -1,17 +1,13 @@
 import { Grid } from "@mui/material";
 import { MainContainer } from "components/Common/MainContainer";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 import { HomeButton } from "components/Misc/HomeButton";
 import { href } from "misc/href";
-import { useEffect } from "react";
 
 export function Home() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
   return (
     <MainContainer title="XPLAINED.FYI">
-      <MainTypography>
+      <MainContent>
         <p>Welcome!</p>
         <p>
           Here it is our goal to explain to you the building blocks of software
@@ -26,7 +22,7 @@ export function Home() {
             or algorithms path below.
           </p>
         </p>
-      </MainTypography>
+      </MainContent>
 
       <Grid display="flex" flexDirection="column" textAlign="center">
         <HomeButton to={href.ds.home} text="DATA STRUCTURES" top />

@@ -7,7 +7,9 @@ export function Title({ title }) {
         variant="h1"
         color="black"
         textAlign="center"
-        sx={{ textShadow: "0.1rem 0.1rem 0.3rem goldenrod" }}
+        sx={{
+          textShadow: "0.1rem 0.1rem 0.3rem goldenrod",
+        }}
       >
         {title}
       </Typography>

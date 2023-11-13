@@ -1,21 +1,16 @@
-import { useEffect } from "react";
 import { codeSnippets } from "misc/dsCodeSnippets";
 import { CodeBlock } from "components/CodeBlock/CodeBlock";
 import { StackDemo } from "./Demo";
 import { PageButtons } from "components/Common/PageButtons";
 import { MainDivider } from "components/Common/Divider";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 import { MainContainer } from "components/Common/MainContainer";
 import { href } from "misc/href";
 
 export function StackPage() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
-
   return (
     <MainContainer title="STACK">
-      <MainTypography>
+      <MainContent>
         <p>
           A stack is a Last In First Out or LIFO data structure. That means that
           the first data to come in is the last data to come out. You can
@@ -82,7 +77,7 @@ export function StackPage() {
         />
         <MainDivider />
         <StackDemo />
-      </MainTypography>
+      </MainContent>
       <PageButtons
         forwardTitle="QUEUE"
         forwardTo={href.ds.queue}

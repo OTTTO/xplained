@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { codeSnippets } from "misc/dsCodeSnippets";
 import { CodeBlock } from "components/CodeBlock/CodeBlock";
 import { PageButtons } from "components/Common/PageButtons";
@@ -6,16 +5,12 @@ import { BSTDemo } from "./Demo";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
 import { href } from "misc/href";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 
 export function BSTPage() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
-
   return (
     <MainContainer title="BINARY SEARCH TREE">
-      <MainTypography>
+      <MainContent>
         <p>
           While sequential data structures are all lined up in sequence either
           front to back or top down, trees branch out with nodes in multiple
@@ -128,7 +123,7 @@ export function BSTPage() {
         <CodeBlock text={codeSnippets.bst.delete} title="delete" />
         <MainDivider />
         <BSTDemo />
-      </MainTypography>
+      </MainContent>
       <PageButtons
         backTitle="DOUBLY LINKED LIST"
         backTo={href.ds.dll}

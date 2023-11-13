@@ -1,18 +1,14 @@
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 import { PageButtons } from "components/Common/PageButtons";
 import { href } from "misc/href";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export function DataStructures() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
   return (
     <MainContainer title="DATA STRUCTURES">
-      <MainTypography>
+      <MainContent>
         <p>
           If you have ever written any code, you have most likely already worked
           with a number of data structures. Arrays and strings are probably the
@@ -70,7 +66,7 @@ export function DataStructures() {
           <li>Breadth First Search</li>
           <li>Depth First Search</li>
         </ul>
-      </MainTypography>
+      </MainContent>
       <PageButtons
         forwardTitle="STACK"
         forwardTo={href.ds.stack}

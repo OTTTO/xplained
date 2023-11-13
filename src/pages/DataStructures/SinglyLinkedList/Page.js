@@ -1,21 +1,16 @@
-import { useEffect } from "react";
 import { CodeBlock } from "components/CodeBlock/CodeBlock";
 import { PageButtons } from "components/Common/PageButtons";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 import { codeSnippets } from "misc/dsCodeSnippets";
 import { href } from "misc/href";
 import { SLLDemo } from "./Demo";
 
 export function SLLPage() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
-
   return (
     <MainContainer title="SINGLY LINKED LIST">
-      <MainTypography>
+      <MainContent>
         <p>
           A linked list is a sequential data structure. It behaves similarly to
           an array except that it has different algorithmic complexity meaning
@@ -106,7 +101,7 @@ export function SLLPage() {
         </p>
         <MainDivider />
         <SLLDemo />
-      </MainTypography>
+      </MainContent>
       <PageButtons
         backTitle="QUEUE"
         backTo={href.ds.queue}

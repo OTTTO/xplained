@@ -1,21 +1,16 @@
-import { useEffect } from "react";
 import { CodeBlock } from "components/CodeBlock/CodeBlock";
 import { PageButtons } from "components/Common/PageButtons";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 import { codeSnippets } from "misc/dsCodeSnippets";
 import { href } from "misc/href";
 import { DLLDemo } from "./Demo";
 
 export function DLLPage() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
-
   return (
     <MainContainer title="DOUBLY LINKED LIST">
-      <MainTypography>
+      <MainContent>
         <p>
           A doubly linked list follows the same concept as a singly linked list
           except there can be addition/deletion/traversal from either the tail
@@ -117,7 +112,7 @@ export function DLLPage() {
         </p>
         <MainDivider />
         <DLLDemo />
-      </MainTypography>
+      </MainContent>
       <PageButtons
         backTitle="SINGLY LINKED LIST"
         backTo={href.ds.sll}

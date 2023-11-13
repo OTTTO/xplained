@@ -4,8 +4,9 @@ import { AlgoButton } from "components/Common/AlgoButton";
 import { DemoTitle } from "components/Common/DemoTitle";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 import { PageButtons } from "components/Common/PageButtons";
+import { OperationDescription } from "components/LinkedListDemo/OperationDescription";
 import { codeSnippets } from "misc/algoCodeSnippets";
 import { href } from "misc/href";
 import { useState } from "react";
@@ -77,7 +78,7 @@ export function ReverseTwoPointers() {
   };
   return (
     <MainContainer title="REVERSE">
-      <MainTypography>
+      <MainContent>
         <Grid>
           <Typography backgroundColor="#d3d3d3" padding="1rem" marginTop="1rem">
             Reverse an array and a string in place using constant memory.
@@ -96,10 +97,10 @@ export function ReverseTwoPointers() {
             title="reverse array"
           />
           <p>
-            Reversing a string in place in most languages is made difficult
-            since we would have to leverage the substring and charAt methods.
-            Instead we will transfrom the string into a character array and
-            leverage the code we used to reverse an array.
+            Reversing a string in place is made difficult by the fact that we
+            would have to mainpulate substrings. Instead we will transfrom the
+            string into a character array and leverage the code we used to
+            reverse an array.
           </p>
           <CodeBlock
             text={codeSnippets.indexed.reverseStr}
@@ -108,6 +109,10 @@ export function ReverseTwoPointers() {
           <MainDivider />
           <Grid textAlign="center" margin="0 auto" marginTop="1rem">
             <DemoTitle title="REVERSE ARRAY DEMO" />
+            <Grid display="flex" justifyContent="center" margin=".2rem 0 .5rem">
+              <OperationDescription backgroundColor="blue" text="i" />
+              <OperationDescription backgroundColor="orange" text="j" />
+            </Grid>
             <Grid display="flex" justifyContent="center">
               {new Array(arr.length).fill(true).map((_, idx) => (
                 <Grid
@@ -130,7 +135,7 @@ export function ReverseTwoPointers() {
             />
           </Grid>
         </Grid>
-      </MainTypography>
+      </MainContent>
       <PageButtons backTitle="ALGORITHMS" backTo={href.algo.home} />
     </MainContainer>
   );

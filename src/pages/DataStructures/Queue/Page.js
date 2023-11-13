@@ -1,21 +1,16 @@
-import { useEffect } from "react";
 import { codeSnippets } from "misc/dsCodeSnippets";
 import { CodeBlock } from "components/CodeBlock/CodeBlock";
 import { PageButtons } from "components/Common/PageButtons";
 import { QueueDemo } from "./Demo";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
-import { MainTypography } from "components/Common/MainTypography";
+import { MainContent } from "components/Common/MainContent";
 import { href } from "misc/href";
 
 export function QueuePage() {
-  useEffect(() => {
-    document.getElementById("outerGrid").scrollIntoView();
-  }, []);
-
   return (
     <MainContainer title="QUEUE">
-      <MainTypography>
+      <MainContent>
         <p>
           You are probably familiar with the term queue, as in the queue (or
           line) at the movie theater. The first person that goes into the queue,
@@ -81,7 +76,7 @@ export function QueuePage() {
         />
         <MainDivider />
         <QueueDemo />
-      </MainTypography>
+      </MainContent>
       <PageButtons
         backTitle="STACK"
         backTo={href.ds.stack}
