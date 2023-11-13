@@ -12,7 +12,7 @@ export function MainContainer({ title, children }) {
       id="outerGrid"
       paddingTop=".5rem"
       backgroundColor="#f9f9f9"
-      height="100vh"
+      minHeight="100vh"
     >
       <Grid container direction="column" margin="0 auto">
         <Title title={title} />

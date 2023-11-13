@@ -112,7 +112,6 @@ export function HeapDemo() {
       textAlign="center"
       justifyContent="center"
       alignItems="center"
-      marginBottom="2rem"
     >
       <DemoTitle title="HEAP DEMO" />
       <Grid

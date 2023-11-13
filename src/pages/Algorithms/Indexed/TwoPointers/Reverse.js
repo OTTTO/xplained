@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { CodeBlock } from "components/CodeBlock/CodeBlock";
 import { AlgoButton } from "components/Common/AlgoButton";
+import { AlgoProblem } from "components/Common/AlgoProblem";
 import { DemoTitle } from "components/Common/DemoTitle";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
@@ -12,7 +13,7 @@ import { href } from "misc/href";
 import { useState } from "react";
 import { sleep } from "utils/utils";
 
-export function ReverseTwoPointers() {
+export function Reverse() {
   const str = "1234567";
   const [arr, setArr] = useState(str.split(""));
   const [i, setI] = useState();
@@ -80,9 +81,9 @@ export function ReverseTwoPointers() {
     <MainContainer title="REVERSE">
       <MainContent>
         <Grid>
-          <Typography backgroundColor="#d3d3d3" padding="1rem" marginTop="1rem">
+          <AlgoProblem>
             Reverse an array and a string in place using constant memory.
-          </Typography>
+          </AlgoProblem>
           <p>
             In order to reverse an array in place with constant memory, only
             using one variable, we start with one pointer to the 0th element and
@@ -136,7 +137,13 @@ export function ReverseTwoPointers() {
           </Grid>
         </Grid>
       </MainContent>
-      <PageButtons backTitle="ALGORITHMS" backTo={href.algo.home} />
+      <PageButtons
+        algo
+        backTitle="ALGORITHMS"
+        backTo={href.algo.home}
+        forwardTitle="PALINDROME"
+        forwardTo={href.algo.indexed.palindrome}
+      />
     </MainContainer>
   );
 }

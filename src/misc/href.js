@@ -13,6 +13,7 @@ export const href = {
     home: "/algo",
     indexed: {
       reverse: "/algo/indexed/reverse",
+      palindrome: "/algo/indexed/palindrome",
     },
   },
 };

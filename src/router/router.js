@@ -11,7 +11,8 @@ import { BSTPage } from "pages/DataStructures/BinarySearchTree/Page";
 import { HeapPage } from "pages/DataStructures/Heap/Page";
 
 import { Algorithms } from "pages/Algorithms";
-import { ReverseTwoPointers } from "pages/Algorithms/Indexed/TwoPointers/Reverse";
+import { Reverse } from "pages/Algorithms/Indexed/TwoPointers/Reverse";
+import { Palindrome } from "pages/Algorithms/Indexed/TwoPointers/Palindrome";
 
 function AppRoutes() {
   return (
@@ -28,10 +29,8 @@ function AppRoutes() {
         <Route path={href.ds.heap} element={<HeapPage />} />
 
         <Route path={href.algo.home} element={<Algorithms />} />
-        <Route
-          path={href.algo.indexed.reverse}
-          element={<ReverseTwoPointers />}
-        />
+        <Route path={href.algo.indexed.reverse} element={<Reverse />} />
+        <Route path={href.algo.indexed.palindrome} element={<Palindrome />} />
       </Routes>
     </BrowserRouter>
   );

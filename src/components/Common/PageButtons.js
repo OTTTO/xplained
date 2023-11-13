@@ -12,6 +12,7 @@ export function PageButtons({
   forwardTitle,
   forwardTo,
   isHome,
+  algo,
 }) {
   return (
     <Grid display="flex" justifyContent="space-between" alignItems="center">
@@ -30,7 +31,7 @@ export function PageButtons({
         sx={{ transform: "translate(-50%, -5%)", left: "50%" }}
       >
         {!isHome && (
-          <Link to={href.ds.home}>
+          <Link to={algo ? href.algo.home : href.ds.home}>
             <IconButton>
               <OtherHousesIcon />
             </IconButton>

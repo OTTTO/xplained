@@ -39,7 +39,9 @@ export function Algorithms() {
                   Reverse a string or array
                 </Link>
               </li>
-              <li>Detect Palindrome</li>
+              <li>
+                <Link to={href.algo.indexed.palindrome}>Detect palindrome</Link>
+              </li>
               <li>Find sorted addends</li>
               <li>Subsequence</li>
             </ul>
