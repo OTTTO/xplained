@@ -4,8 +4,8 @@ import { PageButtons } from "components/Common/PageButtons";
 import { HeapDemo } from "./Demo";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
-import { href } from "misc/href";
 import { MainContent } from "components/Common/MainContent";
+import { pages } from "misc/pages";
 
 export function HeapPage() {
   return (
@@ -93,7 +93,7 @@ export function HeapPage() {
         <MainDivider />
         <HeapDemo />
       </MainContent>
-      <PageButtons backTitle="Binary Search Tree" backTo={href.ds.bst} />
+      <PageButtons page={pages.heap} />
     </MainContainer>
   );
 }

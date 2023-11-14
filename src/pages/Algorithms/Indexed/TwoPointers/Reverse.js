@@ -9,7 +9,7 @@ import { MainContent } from "components/Common/MainContent";
 import { PageButtons } from "components/Common/PageButtons";
 // import { OperationDescription } from "components/LinkedListDemo/OperationDescription";
 import { codeSnippets } from "misc/algoCodeSnippets";
-import { href } from "misc/href";
+import { pages } from "misc/pages";
 // import { useState } from "react";
 // import { sleep } from "utils/utils";
 
@@ -137,13 +137,7 @@ export function Reverse() {
           </Grid> */}
         </Grid>
       </MainContent>
-      <PageButtons
-        algo
-        backTitle="ALGORITHMS"
-        backTo={href.algo.home}
-        forwardTitle="PALINDROME"
-        forwardTo={href.algo.indexed.palindrome}
-      />
+      <PageButtons algo page={pages.reverse} />
     </MainContainer>
   );
 }

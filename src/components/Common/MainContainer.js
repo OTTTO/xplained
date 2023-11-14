@@ -22,7 +22,7 @@ export function MainContainer({ title, children }) {
           maxWidth="800px"
           margin="0 auto"
           marginBottom="2.4rem"
-          minHeight="90vh"
+          minHeight="85vh"
           direction="column"
           flex="1"
         >

@@ -3,6 +3,7 @@ import { MainContainer } from "components/Common/MainContainer";
 import { MainContent } from "components/Common/MainContent";
 import { PageButtons } from "components/Common/PageButtons";
 import { href } from "misc/href";
+import { pages } from "misc/pages";
 import { Link } from "react-router-dom";
 
 export function DataStructures() {
@@ -67,13 +68,7 @@ export function DataStructures() {
           <li>Depth First Search</li>
         </ul>
       </MainContent>
-      <PageButtons
-        forwardTitle="STACK"
-        forwardTo={href.ds.stack}
-        backTitle="HOME"
-        backTo={href.home}
-        isHome
-      />
+      <PageButtons page={pages.dsHome} isHome />
     </MainContainer>
   );
 }

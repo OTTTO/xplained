@@ -6,14 +6,7 @@ import { Link } from "react-router-dom";
 import { PageButtonText } from "./PageButtonText";
 import { href } from "misc/href";
 
-export function PageButtons({
-  backTitle,
-  backTo,
-  forwardTitle,
-  forwardTo,
-  isHome,
-  algo,
-}) {
+export function PageButtons({ page, isHome, algo }) {
   return (
     <Grid
       marginTop="auto"
@@ -22,11 +15,11 @@ export function PageButtons({
       alignItems="center"
     >
       <Grid>
-        {backTitle && backTo && (
-          <Link to={backTo}>
+        {page.prev && (
+          <Link to={page.prev.to}>
             <Button>
               <ArrowBackIosIcon />
-              <PageButtonText text={backTitle} />
+              <PageButtonText text={page.prev.text} />
             </Button>
           </Link>
         )}
@@ -43,10 +36,10 @@ export function PageButtons({
           </Link>
         )}
       </Grid>
-      {forwardTitle && forwardTo && (
-        <Link to={forwardTo}>
+      {page.next && (
+        <Link to={page.next.to}>
           <Button>
-            <PageButtonText text={forwardTitle} />
+            <PageButtonText text={page.next.text} />
             <ArrowForwardIosIcon />
           </Button>
         </Link>

@@ -5,7 +5,7 @@ import { MainContainer } from "components/Common/MainContainer";
 import { MainContent } from "components/Common/MainContent";
 import { PageButtons } from "components/Common/PageButtons";
 import { codeSnippets } from "misc/algoCodeSnippets";
-import { href } from "misc/href";
+import { pages } from "misc/pages";
 
 export function Palindrome() {
   return (
@@ -32,11 +32,7 @@ export function Palindrome() {
           />
         </Grid>
       </MainContent>
-      <PageButtons
-        algo
-        backTitle="REVERSE"
-        backTo={href.algo.indexed.reverse}
-      />
+      <PageButtons algo page={pages.palindrome} />
     </MainContainer>
   );
 }

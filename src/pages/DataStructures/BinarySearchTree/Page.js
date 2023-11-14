@@ -4,8 +4,8 @@ import { PageButtons } from "components/Common/PageButtons";
 import { BSTDemo } from "./Demo";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
-import { href } from "misc/href";
 import { MainContent } from "components/Common/MainContent";
+import { pages } from "misc/pages";
 
 export function BSTPage() {
   return (
@@ -124,12 +124,7 @@ export function BSTPage() {
         <MainDivider />
         <BSTDemo />
       </MainContent>
-      <PageButtons
-        backTitle="DOUBLY LINKED LIST"
-        backTo={href.ds.dll}
-        forwardTitle="HEAP"
-        forwardTo={href.ds.heap}
-      />
+      <PageButtons page={pages.bst} />
     </MainContainer>
   );
 }

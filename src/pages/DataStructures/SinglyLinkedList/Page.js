@@ -4,8 +4,8 @@ import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
 import { MainContent } from "components/Common/MainContent";
 import { codeSnippets } from "misc/dsCodeSnippets";
-import { href } from "misc/href";
 import { SLLDemo } from "./Demo";
+import { pages } from "misc/pages";
 
 export function SLLPage() {
   return (
@@ -102,12 +102,7 @@ export function SLLPage() {
         <MainDivider />
         <SLLDemo />
       </MainContent>
-      <PageButtons
-        backTitle="QUEUE"
-        backTo={href.ds.queue}
-        forwardTitle="DOUBLY LINKED LIST"
-        forwardTo={href.ds.dll}
-      />
+      <PageButtons page={pages.sll} />
     </MainContainer>
   );
 }

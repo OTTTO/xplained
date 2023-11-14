@@ -5,7 +5,7 @@ import { QueueDemo } from "./Demo";
 import { MainDivider } from "components/Common/Divider";
 import { MainContainer } from "components/Common/MainContainer";
 import { MainContent } from "components/Common/MainContent";
-import { href } from "misc/href";
+import { pages } from "misc/pages";
 
 export function QueuePage() {
   return (
@@ -77,12 +77,7 @@ export function QueuePage() {
         <MainDivider />
         <QueueDemo />
       </MainContent>
-      <PageButtons
-        backTitle="STACK"
-        backTo={href.ds.stack}
-        forwardTitle="SINGLY LINKED LIST"
-        forwardTo={href.ds.sll}
-      />
+      <PageButtons page={pages.queue} />
     </MainContainer>
   );
 }

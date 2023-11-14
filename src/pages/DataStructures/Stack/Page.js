@@ -5,7 +5,7 @@ import { PageButtons } from "components/Common/PageButtons";
 import { MainDivider } from "components/Common/Divider";
 import { MainContent } from "components/Common/MainContent";
 import { MainContainer } from "components/Common/MainContainer";
-import { href } from "misc/href";
+import { pages } from "misc/pages";
 
 export function StackPage() {
   return (
@@ -78,12 +78,7 @@ export function StackPage() {
         <MainDivider />
         <StackDemo />
       </MainContent>
-      <PageButtons
-        forwardTitle="QUEUE"
-        forwardTo={href.ds.queue}
-        backTitle="DATA STRUCTURES"
-        backTo={href.ds.home}
-      />
+      <PageButtons page={pages.stack} />
     </MainContainer>
   );
 }

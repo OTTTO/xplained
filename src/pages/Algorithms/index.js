@@ -3,6 +3,7 @@ import { MainContainer } from "components/Common/MainContainer";
 import { MainContent } from "components/Common/MainContent";
 import { PageButtons } from "components/Common/PageButtons";
 import { href } from "misc/href";
+import { pages } from "misc/pages";
 import { Link } from "react-router-dom";
 
 export function Algorithms() {
@@ -62,7 +63,7 @@ export function Algorithms() {
           <li>Find addends</li>
         </ul>
       </MainContent>
-      <PageButtons backTitle="HOME" backTo={href.home} isHome />
+      <PageButtons page={pages.algoHome} isHome />
     </MainContainer>
   );
 }
