@@ -54,5 +54,37 @@ export const codeSnippets = {
       return true;
     }`,
     },
+    sortedAddends: {
+      python: `def hasAddends(arr, target): 
+  left = 0;
+  right = len(arr) - 1;
+
+  while (left < right):
+    curr = arr[left] + arr[right]
+    if (curr == target):
+      return True
+    if (curr > target):
+      right -= 1
+    else:
+      left += 1
+  return False`,
+      javascript: `const hasAddends = (arr, target) => {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+    let curr = arr[left] + arr[right];
+    if (curr === target) {
+      return true;
+    }
+    if (curr > target) {
+      right--;
+    } else {
+      left++;
+    }
+  }
+  return false;
+}`,
+    },
   },
 };

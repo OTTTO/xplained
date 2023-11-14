@@ -41,7 +41,9 @@ export function Algorithms() {
               <li>
                 <Link to={href.algo.indexed.palindrome}>Detect palindrome</Link>
               </li>
-              <li>Find sorted addends</li>
+              <Link to={href.algo.indexed.sortedAddends}>
+                Find sorted addends
+              </Link>
               <li>Subsequence</li>
             </ul>
           </li>

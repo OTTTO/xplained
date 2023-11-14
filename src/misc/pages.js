@@ -7,6 +7,10 @@ const home = { to: href.home, text: "HOME" };
 const algoHome = { to: href.algo.home, text: "ALGORITHMS" };
 const reverse = { to: href.algo.indexed.reverse, text: "REVERSE" };
 const palindrome = { to: href.algo.indexed.palindrome, text: "PALINDROME" };
+const sortedAddends = {
+  to: href.algo.indexed.sortedAddends,
+  text: "SORTED ADDENDS",
+};
 
 // DATA STRUCTURES
 const dsHome = { to: href.ds.home, text: "DATA STRUCTURES" };
@@ -21,7 +25,8 @@ export const pages = {
   // ALGORITHMS
   algoHome: { prev: home, next: reverse },
   reverse: { prev: algoHome, next: palindrome },
-  palindrome: { prev: reverse },
+  palindrome: { prev: reverse, next: sortedAddends },
+  sortedAddends: { prev: palindrome },
 
   // DATA-STRUCTURES
   dsHome: { prev: home, next: stack },

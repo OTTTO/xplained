@@ -14,6 +14,7 @@ export const href = {
     indexed: {
       reverse: "/algorithms/indexed/reverse",
       palindrome: "/algorithms/indexed/palindrome",
+      sortedAddends: "/algorithms/indexed/sorted-addends",
     },
   },
 };
