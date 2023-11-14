@@ -34,17 +34,17 @@ export function Algorithms() {
             Two Pointers
             <ul>
               <li>
-                <Link to={href.algo.indexed.reverse}>
-                  Reverse a string or array
-                </Link>
+                <Link to={href.algo.indexed.reverse}>Reverse</Link>
               </li>
               <li>
-                <Link to={href.algo.indexed.palindrome}>Detect palindrome</Link>
+                <Link to={href.algo.indexed.palindrome}>Palindrome</Link>
               </li>
-              <Link to={href.algo.indexed.sortedAddends}>
-                Find sorted addends
-              </Link>
-              <li>Subsequence</li>
+              <li>
+                <Link to={href.algo.indexed.sortedAddends}>Sorted addends</Link>
+              </li>
+              <li>
+                <Link to={href.algo.indexed.subsequence}>Subsequence</Link>
+              </li>
             </ul>
           </li>
           <li>

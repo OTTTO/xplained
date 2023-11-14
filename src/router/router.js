@@ -18,6 +18,7 @@ import { Algorithms } from "pages/Algorithms";
 import { Reverse } from "pages/Algorithms/Indexed/TwoPointers/Reverse";
 import { Palindrome } from "pages/Algorithms/Indexed/TwoPointers/Palindrome";
 import { Addends } from "pages/Algorithms/Indexed/TwoPointers/SortedAddends";
+import { Subsequence } from "pages/Algorithms/Indexed/TwoPointers/Subsequence";
 
 function AppRoutes() {
   return (
@@ -37,6 +38,7 @@ function AppRoutes() {
         <Route path={href.algo.indexed.reverse} element={<Reverse />} />
         <Route path={href.algo.indexed.palindrome} element={<Palindrome />} />
         <Route path={href.algo.indexed.sortedAddends} element={<Addends />} />
+        <Route path={href.algo.indexed.subsequence} element={<Subsequence />} />
       </Routes>
     </BrowserRouter>
   );

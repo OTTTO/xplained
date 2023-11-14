@@ -1,20 +1,25 @@
+const ds = "/data-structures";
+const algo = "/algorithms";
+const idx = "/indexed";
+
 export const href = {
   home: "/",
   ds: {
-    home: "/data-structures",
-    stack: "/data-structures/stack",
-    queue: "/data-structures/queue",
-    sll: "/data-structures/singly-linked-list",
-    dll: "/data-structures/doubly-linked-list",
-    bst: "/data-structures/binary-search-tree",
-    heap: "/data-structures/heap",
+    home: ds,
+    stack: ds + "/stack",
+    queue: ds + "/queue",
+    sll: ds + "/singly-linked-list",
+    dll: ds + "/doubly-linked-list",
+    bst: ds + "/binary-search-tree",
+    heap: ds + "/heap",
   },
   algo: {
-    home: "/algorithms",
+    home: algo,
     indexed: {
-      reverse: "/algorithms/indexed/reverse",
-      palindrome: "/algorithms/indexed/palindrome",
-      sortedAddends: "/algorithms/indexed/sorted-addends",
+      reverse: algo + idx + "/reverse",
+      palindrome: algo + idx + "/palindrome",
+      sortedAddends: algo + idx + "/sorted-addends",
+      subsequence: algo + idx + "/subsequence",
     },
   },
 };

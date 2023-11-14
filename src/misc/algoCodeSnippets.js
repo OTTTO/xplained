@@ -86,5 +86,27 @@ export const codeSnippets = {
   return false;
 }`,
     },
+    subsequence: {
+      python: `def isSubsequence(s, t): 
+  i = j = 0
+
+  while (i < len(s) and j < len(t)):
+    if (s[i] == s[j]):
+      i += 1
+    j += 1
+
+  return i == len(s)`,
+      javascript: `const isSubsequence = (s, t) => {
+  let i = 0;
+  let j = 0;
+
+  while (i < s.length && j < t.length) {
+    if (s[i] === t[j]) i++;
+    j++;
+  }
+
+  return i === s.length;
+}`,
+    },
   },
 };

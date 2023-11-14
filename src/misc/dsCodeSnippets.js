@@ -101,12 +101,12 @@ console.log(top) // 3
 console.log(stack) // [1, 2]
 stack.slice(-1)[0] // 2 (peek)
 console.log(stack) // [1,2]`,
-      python: `const stack = []
+      python: `stack = []
 stack.append(1)
 stack.append(2)
 stack.append(3)
 print(stack) # [1, 2, 3]
-let top = stack.pop()
+stack.pop()
 print(top) # 3
 print(stack) # [1, 2]
 stack[-1] # 2 (peek)
