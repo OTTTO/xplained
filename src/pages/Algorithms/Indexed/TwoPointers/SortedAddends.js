@@ -18,15 +18,17 @@ export function Addends() {
           </AlgoProblem>
           <p>
             To find the addends we start at either ends of the sorted array, add
-            those to elements together and compare it to the target value. If
-            that sum is less than the target value than we know that we need to
-            increase the sum so we increment the left index, if the sume is
+            those two elements together and compare it to the target value.
+          </p>
+          <p>
+            If that sum is less than the target value than we know that we need
+            to increase the sum so we increment the left index, if the sume is
             greater than the target we value we decrement the right index and
             repeat until we either find the number or exhaust the array.
           </p>
           <CodeBlock
             text={codeSnippets.indexed.sortedAddends}
-            title="sorted addends"
+            forcedLanguage="python"
           />
         </Grid>
       </MainContent>

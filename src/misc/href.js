@@ -20,6 +20,8 @@ export const href = {
       palindrome: algo + idx + "/palindrome",
       sortedAddends: algo + idx + "/sorted-addends",
       subsequence: algo + idx + "/subsequence",
+      largestSum: algo + idx + "largestSum",
+      longestSubstring: algo + idx + "/longestSubstring",
     },
   },
 };

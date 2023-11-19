@@ -4,7 +4,7 @@ import { LanguageSelect } from "./LanguageSelect";
 import { useContext } from "react";
 import { LanguageContext } from "context/language";
 
-export function CodeBlock({ text, title }) {
+export function CodeBlock({ text, title, forcedLanguage }) {
   const { language, setLanguage } = useContext(LanguageContext);
   return (
     <Grid width="25rem" margin="0 auto 1rem" maxWidth="100%">
@@ -15,14 +15,16 @@ export function CodeBlock({ text, title }) {
         alignItems="center"
         marginBottom=".3rem"
       >
-        <LanguageSelect language={language} setLanguage={setLanguage} />
+        {!forcedLanguage && (
+          <LanguageSelect language={language} setLanguage={setLanguage} />
+        )}
         <Typography marginLeft="2rem">
           <b>{title?.toUpperCase()}</b>
         </Typography>
       </Grid>
 
       <CopyBlock
-        language={language}
+        language={forcedLanguage || language}
         text={text[language]}
         showLineNumbers={false}
         theme={monokaiSublime}

@@ -51,9 +51,15 @@ export function Algorithms() {
             Sliding Window
             <ul>
               <li>Longest subarray</li>
-              <li>Longest substring</li>
+              <li>
+                <Link to={href.algo.indexed.longestSubstring}>
+                  Longest substring with substitution
+                </Link>
+              </li>
               <li>Subarray count</li>
-              <li>Subarray sum</li>
+              <li>
+                <Link to={href.algo.indexed.largestSum}>Subarray sum</Link>
+              </li>
             </ul>
           </li>
         </ul>

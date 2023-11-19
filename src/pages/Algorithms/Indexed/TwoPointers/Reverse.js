@@ -87,15 +87,17 @@ export function Reverse() {
           <p>
             In order to reverse an array in place with constant memory, only
             using one variable, we start with one pointer to the 0th element and
-            one pointer to the last element. We swap them using a temp variable
-            in most languages although ptyhon allows us to swap them in a single
-            line of code. After swapping, we increment the first pointer and
-            decrement the second until the pointers meet or pass each other.
-            Doing so we reverse the array.
+            one pointer to the last element.
+          </p>
+          <p>
+            We swap them using a temp variable in most languages although ptyhon
+            allows us to swap them in a single line of code. After swapping, we
+            increment the first pointer and decrement the second until the
+            pointers meet or pass each other. Doing so we reverse the array.
           </p>
           <CodeBlock
             text={codeSnippets.indexed.reverseArr}
-            title="reverse array"
+            forcedLanguage="python"
           />
           <p>
             Reversing a string in place is made difficult by the fact that we
@@ -105,7 +107,7 @@ export function Reverse() {
           </p>
           <CodeBlock
             text={codeSnippets.indexed.reverseStr}
-            title="reverse string"
+            forcedLanguage="python"
           />
           {/* <MainDivider />
           <Grid textAlign="center" margin="0 auto" marginTop="1rem">

@@ -19,6 +19,8 @@ import { Reverse } from "pages/Algorithms/Indexed/TwoPointers/Reverse";
 import { Palindrome } from "pages/Algorithms/Indexed/TwoPointers/Palindrome";
 import { Addends } from "pages/Algorithms/Indexed/TwoPointers/SortedAddends";
 import { Subsequence } from "pages/Algorithms/Indexed/TwoPointers/Subsequence";
+import { LargestSum } from "pages/Algorithms/Indexed/SlidingWindow/LargestSum";
+import { LongestSubstring } from "pages/Algorithms/Indexed/SlidingWindow/LongestSubstring";
 
 function AppRoutes() {
   return (
@@ -39,6 +41,11 @@ function AppRoutes() {
         <Route path={href.algo.indexed.palindrome} element={<Palindrome />} />
         <Route path={href.algo.indexed.sortedAddends} element={<Addends />} />
         <Route path={href.algo.indexed.subsequence} element={<Subsequence />} />
+        <Route path={href.algo.indexed.largestSum} element={<LargestSum />} />
+        <Route
+          path={href.algo.indexed.longestSubstring}
+          element={<LongestSubstring />}
+        />
       </Routes>
     </BrowserRouter>
   );

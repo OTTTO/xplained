@@ -24,15 +24,20 @@ export function Subsequence() {
             going to set the pointer <b>i</b> to the 0th character in the string
             we are testing as a subsequence <b>(s)</b> and the other pointer{" "}
             <b>j</b> is set to the 0th character in the complete string{" "}
-            <b>(t)</b>. We compare the characters until either string has been
-            exhausted, we always increment the pointer j on the complete string
-            and if the comparison is equal, we increment i as well. If i is
-            equal to the length of the complete string once we are done checking
-            we know that <b>s</b> is a subsequence of <b>t</b>.
+            <b>(t)</b>.
+          </p>
+          <p>
+            We compare the characters until either string has been exhausted.{" "}
+          </p>
+          <p>
+            We always increment the pointer j on the complete string and if the
+            comparison is equal, we increment i as well. If i is equal to the
+            length of the complete string once we are done checking, we know
+            that <b>s</b> is a subsequence of <b>t</b>.
           </p>
           <CodeBlock
             text={codeSnippets.indexed.subsequence}
-            title="subsequence"
+            forcedLanguage="python"
           />
         </Grid>
       </MainContent>

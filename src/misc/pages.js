@@ -21,6 +21,11 @@ const sortedAddends = {
   text: "SORTED ADDENDS",
 };
 const subsequence = { to: href.algo.indexed.subsequence, text: "SUBSEQUENCE" };
+const largestSum = { to: href.algo.indexed.largestSum, text: "LARGEST SUM" };
+const longestSubstring = {
+  to: href.algo.indexed.longestSubstring,
+  text: "LONGEST SUBSTRING",
+};
 
 export const pages = {
   // DATA-STRUCTURES
@@ -37,5 +42,7 @@ export const pages = {
   reverse: { prev: algoHome, next: palindrome },
   palindrome: { prev: reverse, next: sortedAddends },
   sortedAddends: { prev: palindrome, next: subsequence },
-  subsequence: { prev: sortedAddends },
+  subsequence: { prev: sortedAddends, next: largestSum },
+  largestSum: { prev: subsequence, next: longestSubstring },
+  longestSubstring: { prev: largestSum },
 };
