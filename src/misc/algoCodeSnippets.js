@@ -182,4 +182,57 @@ k = 10
 findLength(nums, k) # 6 [2,3,1,2,1,1]`,
     },
   },
+  hashing: {
+    twoSum: {
+      python: `def twoSum(nums, target):
+  mapping = {}
+  for idx, num in enumerate(nums):
+    compliment = target - num
+    if compliment in mapping:
+      return (mapping[compliment], idx)
+    mapping[num] = idx
+  return None
+
+nums = [3,1,4,2,5]
+target = 9
+
+twoSum(nums, target) # (2, 4)`,
+    },
+    pangram: {
+      python: `def isPangram(sentence):
+  allLetters = ''.join(sentence.split(' ')).lower()
+  lettersSet = set(allLetters)
+  return len(lettersSet) == 26
+
+pangram = "The quick brown fox jumps over the lazy dog"
+notPangram = "alphabet"
+
+isPangram(pangram)    # True
+isPangram(notPangram) # False`,
+    },
+    wordPattern: {
+      python: `def wordPattern(pattern, s):
+  words = s.split(' ')
+  if (len(set(words)) != len(set(pattern)) or len(pattern) != len(words)):
+    return False
+  mapping = {}
+  for idx, char in enumerate(pattern):
+    if char in mapping:
+      if words[idx] != mapping[char]:
+        return False
+    else:
+      if words[idx] not in mapping.values():
+        mapping[char] = words[idx]
+      else: 
+        return False
+  return True
+
+pattern = "abba"
+good = "dog cat cat dog"
+bad = "dog dog dog dog"
+
+wordPattern(pattern, good) #True
+wordPattern(pattern, bad)  #False`,
+    },
+  },
 };

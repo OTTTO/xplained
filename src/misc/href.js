@@ -1,6 +1,7 @@
 const ds = "/data-structures";
 const algo = "/algorithms";
 const idx = "/indexed";
+const hash = "/hashing";
 
 export const href = {
   home: "/",
@@ -23,6 +24,11 @@ export const href = {
       largestSum: algo + idx + "largestSum",
       longestSubstring: algo + idx + "/longestSubstring",
       longestSubarray: algo + idx + "/longestSubarray",
+    },
+    hashing: {
+      twoSum: algo + hash + "/twoSum",
+      pangram: algo + hash + "/pangram",
+      wordPattern: algo + hash + "/wordPattern",
     },
   },
 };

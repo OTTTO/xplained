@@ -30,6 +30,9 @@ const longestSubstring = {
   text: "LONGEST SUBSTRING",
 };
 const largestSum = { to: href.algo.indexed.largestSum, text: "LARGEST SUM" };
+const twoSum = { to: href.algo.hashing.twoSum, text: "TWO SUM" };
+const pangram = { to: href.algo.hashing.pangram, text: "PANGRAM" };
+const wordPattern = { to: href.algo.hashing.wordPattern, text: "WORD PATTERN" };
 
 export const pages = {
   // DATA-STRUCTURES
@@ -49,5 +52,8 @@ export const pages = {
   subsequence: { prev: sortedAddends, next: largestSum },
   longestSubarray: { prev: subsequence, next: longestSubstring },
   longestSubstring: { prev: longestSubarray, next: largestSum },
-  largestSum: { prev: longestSubstring },
+  largestSum: { prev: longestSubstring, next: twoSum },
+  twoSum: { prev: largestSum, next: pangram },
+  pangram: { prev: twoSum, next: wordPattern },
+  wordPattern: { prev: pangram },
 };

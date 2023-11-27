@@ -22,6 +22,9 @@ import { Subsequence } from "pages/Algorithms/Indexed/TwoPointers/Subsequence";
 import { LargestSum } from "pages/Algorithms/Indexed/SlidingWindow/LargestSum";
 import { LongestSubstring } from "pages/Algorithms/Indexed/SlidingWindow/LongestSubstring";
 import { LongestSubarray } from "pages/Algorithms/Indexed/SlidingWindow/LongestSubarray";
+import { TwoSum } from "pages/Algorithms/Hashing/TwoSum";
+import { Pangram } from "pages/Algorithms/Hashing/Pangram";
+import { WordPattern } from "pages/Algorithms/Hashing/WordPattern";
 
 function AppRoutes() {
   return (
@@ -51,6 +54,9 @@ function AppRoutes() {
           path={href.algo.indexed.longestSubstring}
           element={<LongestSubstring />}
         />
+        <Route path={href.algo.hashing.twoSum} element={<TwoSum />} />
+        <Route path={href.algo.hashing.pangram} element={<Pangram />} />
+        <Route path={href.algo.hashing.wordPattern} element={<WordPattern />} />
       </Routes>
     </BrowserRouter>
   );

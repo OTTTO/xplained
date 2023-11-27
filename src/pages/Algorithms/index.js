@@ -68,10 +68,15 @@ export function Algorithms() {
         </ul>
         <h2 style={{ marginBottom: 0 }}>HASHMAPS AND SETS</h2>
         <ul style={{ marginTop: 0 }}>
-          <li>Count</li>
-          <li>Duplicates</li>
-          <li>Subsequence</li>
-          <li>Find addends</li>
+          <li>
+            <Link to={href.algo.hashing.twoSum}>Hash Map Sum</Link>
+          </li>
+          <li>
+            <Link to={href.algo.hashing.pangram}>Complete Hash Set</Link>
+          </li>
+          <li>
+            <Link to={href.algo.hashing.wordPattern}>Word Pattern</Link>
+          </li>
         </ul>
       </MainContent>
       <PageButtons page={pages.algoHome} isHome />
