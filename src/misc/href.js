@@ -22,6 +22,7 @@ export const href = {
       subsequence: algo + idx + "/subsequence",
       largestSum: algo + idx + "largestSum",
       longestSubstring: algo + idx + "/longestSubstring",
+      longestSubarray: algo + idx + "/longestSubarray",
     },
   },
 };

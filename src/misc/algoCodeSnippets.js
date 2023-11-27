@@ -31,7 +31,7 @@ print(array) # [4,3,2,1]`,
   return ''.join(arr)
 
 sentence = "Hello World"
-print(reverseStr(sentence)) # "dlroW olleH"`,
+reverseStr(sentence) # "dlroW olleH"`,
       javascript: `const reverseStr = (str) => {
   const arr = str.split("")
   reverseArr(arr)
@@ -53,8 +53,8 @@ print(reverseStr(sentence)) # "dlroW olleH"`,
 palindrome = "racecar"
 notPalindrome = "foolproof"
 
-print(isPalindrome(palindrome)) # True
-print(isPalindrome(notPalindrome)) # False`,
+isPalindrome(palindrome) # True
+isPalindrome(notPalindrome) # False`,
       javascript: `function isPalindrome(word) {
       let i = 0;
       let j = word.length - 1;
@@ -83,8 +83,8 @@ print(isPalindrome(notPalindrome)) # False`,
   return False
 
 nums = [1, 2, 3, 6, 8, 9, 14, 15]
-print(hasAddends(nums, 7)) # True
-print(hasAddends(nums, 13)) # False`,
+hasAddends(nums, 7) # True
+hasAddends(nums, 13) # False`,
       javascript: `const hasAddends = (arr, target) => {
   let left = 0;
   let right = arr.length - 1;
@@ -119,7 +119,7 @@ string = "apple"
 print(isSubsequence(subSeq, string)) # True
 
 badSubSeq = "amp"
-print(isSubsequence(badSubSeq, string)) #False`,
+isSubsequence(badSubSeq, string) #False`,
       javascript: `const isSubsequence = (s, t) => {
   let i = 0;
   let j = 0;
@@ -147,7 +147,7 @@ print(isSubsequence(badSubSeq, string)) #False`,
 
 nums = [1,2,3,6,7,5,4]
 k = 3
-print(largestSum(nums, k)) # 18 [6,7,5]`,
+largestSum(nums, k) # 18 [6,7,5]`,
     },
     longestSubstring: {
       python: `def longest1Substring(s): 
@@ -163,7 +163,23 @@ print(largestSum(nums, k)) # 18 [6,7,5]`,
   return ans
 
   s = "1101100111"
-print(longest1Substring(s)) # 5 "11011"`,
+longest1Substring(s) # 5 "11011"`,
+    },
+    longestSubarray: {
+      python: `def findLength(nums, k):
+  left = curr = ans = 0
+  for right in range(len(nums)):
+    curr += nums[right]
+    while curr > k:			
+      curr -= nums[left]
+      left += 1
+    ans = max(ans, right - left + 1)
+  return ans
+
+nums = [7,4,2,3,1,2,1,1,6]
+k = 10
+
+findLength(nums, k) # 6 [2,3,1,2,1,1]`,
     },
   },
 };

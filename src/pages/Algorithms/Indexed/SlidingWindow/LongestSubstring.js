@@ -30,8 +30,9 @@ export function LongestSubstring() {
           <p>
             At the end of each iteration, set the answer to be the maximun of
             the current answer and the current window size (right - left + 1).
+            Once the right hand side of the window hits the end of the array, we
+            return the answer.
           </p>
-          <p>When looping is complete return ans.</p>
 
           <CodeBlock
             text={codeSnippets.indexed.longestSubstring}
